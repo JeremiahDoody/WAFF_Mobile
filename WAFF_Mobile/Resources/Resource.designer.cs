@@ -60,14 +60,14 @@ namespace WAFF_Mobile
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060001
-			public const int favorites = 2131099649;
+			// aapt resource value: 0x7f050001
+			public const int favorites = 2131034113;
 			
-			// aapt resource value: 0x7f060002
-			public const int leaderboard = 2131099650;
+			// aapt resource value: 0x7f050002
+			public const int leaderboard = 2131034114;
 			
-			// aapt resource value: 0x7f060000
-			public const int relativeLayout1 = 2131099648;
+			// aapt resource value: 0x7f050000
+			public const int relativeLayout1 = 2131034112;
 			
 			static Id()
 			{
@@ -91,22 +91,6 @@ namespace WAFF_Mobile
 			}
 			
 			private Layout()
-			{
-			}
-		}
-		
-		public partial class Menu
-		{
-			
-			// aapt resource value: 0x7f050000
-			public const int menu_options = 2131034112;
-			
-			static Menu()
-			{
-				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-			}
-			
-			private Menu()
 			{
 			}
 		}
