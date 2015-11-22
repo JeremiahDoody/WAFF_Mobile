@@ -89,7 +89,7 @@ namespace WAFF_Mobile
 					favoritesButton.Text = offButtonText;
 					favoriteColorState = 0;
 				}
-			};
+			};//end listener
 
 //			// Get our button from the layout resource,
 //			// and attach an event to it
