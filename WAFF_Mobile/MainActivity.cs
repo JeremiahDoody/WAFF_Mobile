@@ -91,6 +91,8 @@ namespace WAFF_Mobile
 				}
 			};//end listener
 
+			//*********TESTING**************
+
 //			// Get our button from the layout resource,
 //			// and attach an event to it
 //			Button button = FindViewById<Button> (Resource.Id.myButton);
