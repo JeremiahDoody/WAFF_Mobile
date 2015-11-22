@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.OS;
 using System.Collections.Generic;
 using System.Threading;
+using Mono;
 //using System.Windows.Media;
 
 namespace WAFF_Mobile
@@ -17,7 +18,12 @@ namespace WAFF_Mobile
 	{
 		//int count = 1;
 		List<String> tempList = new List<String>();
+		//init buttons
 		Button leaderboardButton, favoritesButton;
+		//init views
+		ScrollView scrollView;
+
+		//init other global variables
 		int favoriteColorState = 0;
 		//ConsoleColor favoriteButtonDefaultColor;
 
@@ -31,8 +37,10 @@ namespace WAFF_Mobile
 			tempList.Add ("1. First movie.   50%");
 			tempList.Add ("2. Second movie.  50%");
 
+			//set buttons
 			leaderboardButton = FindViewById<Button> (Resource.Id.leaderboard);
-
+			//set views
+			scrollView = FindViewById<ScrollView> (Resource.Id.mainScrollView);
 
 			int lbCount = 0;
 
@@ -90,10 +98,16 @@ namespace WAFF_Mobile
 //			button.Click += delegate {
 //				button.Text = string.Format ("{0} clicks!", count++);
 //			};
+			TextView text = FindViewById<TextView> (Resource.Id.textView1);
+			text.Append("Text will go below here.");
+			for(int i = 0; i<100; i++)
+			{
+				
+				text.Append ("\nThis is line number " + i + ".");
 
+			}//end temp for loop
 
-
-		}
+		}//end onCreate() method
 
 //		private void tmrUpdate(System.Object sender, System.EventArgs e)
 //		{
