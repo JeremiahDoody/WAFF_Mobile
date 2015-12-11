@@ -10,18 +10,37 @@ using System.Collections.Generic;
 using System.Threading;
 using Mono;
 //using System.Windows.Media;
+using Android.Graphics.Drawables;
+using Android.Graphics;
+
+
+
 
 namespace WAFF_Mobile
 {
+
+	 
+
 	[Activity (Label = "WAFF_Mobile", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
+//		public struct Film{
+//			public String name;
+//			public String time;
+//		}
+
 		//int count = 1;
 		List<String> tempList = new List<String>();
+		//List<Film> filmList = new List<Film>();
 		//init buttons
 		Button leaderboardButton, favoritesButton;
 		//init views
 		ScrollView scrollView;
+
+
+		//temp data
+		//Film first;
+		//first.name = "";
 
 		//init other global variables
 		int favoriteColorState = 0;
@@ -100,14 +119,74 @@ namespace WAFF_Mobile
 //			button.Click += delegate {
 //				button.Text = string.Format ("{0} clicks!", count++);
 //			};
-			TextView text = FindViewById<TextView> (Resource.Id.textView1);
-			text.Append("Text will go below here.");
-			for(int i = 0; i<100; i++)
+
+
+
+			// Creating a new RelativeLayout
+			//new RelativeLayout(this);
+			//relativeLayout.RemoveView ((ScrollView)relativeLayout.Parent);
+
+			// Defining the RelativeLayout layout parameters.
+			// In this case I want to fill its parent
+			//RelativeLayout.LayoutParams rlp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WrapContent, RelativeLayout.LayoutParams.WrapContent);
+
+			//rlp.AddRule (LayoutRules.);
+				//RelativeLayout.LayoutParams.FILL_PARENT,
+				//RelativeLayout.LayoutParams.FILL_PARENT);
+
+
+
+
+			//lp.addRule(RelativeLayout.CENTER_IN_PARENT);
+
+
+
+			// Setting the RelativeLayout as our content view
+			//SetContentView(relativeLayout, lp);
+
+			LinearLayout linearLayout = FindViewById<LinearLayout>(Resource.Id.linearLayout2);
+
+			for(int i = 0; i<=10; i++)
 			{
 				
-				text.Append ("\nThis is line number " + i + ".");
+				Button btn1 = new Button (this);
+				btn1.Text = "btn" + i;
+				btn1.Id = i;
+
+				// Defining the layout parameters of the TextView
+				LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+					LinearLayout.LayoutParams.WrapContent,
+					LinearLayout.LayoutParams.WrapContent);
+
+
+
+				// Setting the parameters on the TextView
+				btn1.LayoutParameters = lp;
+
+				//set layout orientation
+				linearLayout.Orientation = Orientation.Vertical;
+
+				//ctrl-alt-space after term for auto import
+
+				//set border
+				GradientDrawable border = new GradientDrawable();
+				border.SetColor(0x7FFFFFFF); //white background
+				border.SetStroke(1, Color.Black); //black border with full opacity//0xFF000000
+				if(Build.VERSION.SdkInt < Android.OS.BuildVersionCodes.JellyBean) 
+				{
+					linearLayout.SetBackgroundDrawable(border);
+				} 
+				else 
+				{
+					linearLayout.SetBackgroundDrawable(border);
+				}
+
+				// Adding the TextView to the RelativeLayout as a child
+				linearLayout.AddView(btn1);
 
 			}//end temp for loop
+
+
 
 		}//end onCreate() method
 
