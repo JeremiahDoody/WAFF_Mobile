@@ -208,17 +208,20 @@ namespace WAFF_Mobile
 		public override bool OnCreateOptionsMenu(IMenu menu)
 		{
 			menu.Add(0,0,0,"Options");
+			//menu.add //Logout. NOTE: will need to hide logout buttons while user is not logged in, but will need to use another method to do so.
 			return true;
 		}
 
-
+		//dicatets what heppens for thos emenu buttons
 		public override bool OnOptionsItemSelected(IMenuItem item)
 		{
 			switch (item.ItemId)
 			{
 			case 0: //Do stuff for button 0
+				//TODO... add functinality for Options menu item
 				return true;
 			case 1: //Do stuff for button 1
+				//TODO... add functinality for LogOut menu item
 				return true;
 			default:
 				return base.OnOptionsItemSelected(item);
