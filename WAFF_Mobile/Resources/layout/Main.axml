@@ -2,7 +2,13 @@
 <RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
     p1:layout_width="match_parent"
     p1:layout_height="match_parent"
-    p1:id="@+id/relativeLayout1">
+    p1:id="@+id/relativeLayout1"
+    p1:scrollbars="vertical">
+    <resources>
+        <style
+            name="WaffUITheme"
+            parent="@android:style/Theme.Light" />
+    </resources>
     <ScrollView
         p1:minWidth="25px"
         p1:minHeight="25px"

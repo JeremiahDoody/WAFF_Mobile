@@ -29,7 +29,7 @@ namespace WAFF_Mobile
 //			public String time;
 //		}
 
-		//int count = 1;
+		//int count = 1;//
 		List<String> tempList = new List<String>();
 		//List<Film> filmList = new List<Film>();
 		//init buttons
