@@ -212,7 +212,7 @@ namespace WAFF_Mobile
 			return true;
 		}
 
-		//dicatets what heppens for thos emenu buttons
+		//dictates what happens for those menu buttons
 		public override bool OnOptionsItemSelected(IMenuItem item)
 		{
 			switch (item.ItemId)
