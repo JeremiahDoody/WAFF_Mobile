@@ -37,9 +37,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WAFF_Mobile\WAFF_Mobile.csproj">
-      <Project>{0749296F-BC75-404C-BB8B-407F364CB85C}</Project>
-      <Name>WAFF_Mobile</Name>
+    <ProjectReference Include="..\WAFF_Mobile_ios\WAFF_Mobile.IOS.csproj">
+      <Project>{D06D357E-97E3-45F8-A1C8-C15FA87DAA28}</Project>
+      <Name>WAFF_Mobile.IOS</Name>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>
     </ProjectReference>

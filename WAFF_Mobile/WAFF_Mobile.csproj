@@ -48,7 +48,6 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\layout\MyPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -56,6 +55,7 @@
     <None Include="Assets\AboutAssets.txt" />
     <None Include="PresentationCore.dll" />
     <None Include="EmptyXmlFile.xml" />
+    <None Include="Resources\layout\MyPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
