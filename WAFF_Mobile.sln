@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WAFF_Mobile", "WAFF_Mobile\WAFF_Mobile.csproj", "{0749296F-BC75-404C-BB8B-407F364CB85C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WAFF_Mobile.Droid", "WAFF_Mobile\WAFF_Mobile.Droid.csproj", "{0749296F-BC75-404C-BB8B-407F364CB85C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WAFF_Mobile.UITests", "WAFF_Mobile.UITests\WAFF_Mobile.UITests.csproj", "{4727D06E-C040-4CD0-825A-11935E7540AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WAFF_Mobile.IOS", "WAFF_Mobile_ios\WAFF_Mobile.IOS.csproj", "{D06D357E-97E3-45F8-A1C8-C15FA87DAA28}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WAFF_Mobile.XF", "WAFF_Mobile_ios\WAFF_Mobile.XF.csproj", "{D06D357E-97E3-45F8-A1C8-C15FA87DAA28}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WAFF_Droid", "WAFF_Droid\WAFF_Droid.csproj", "{92449283-2E0F-47FB-A94F-49B0E5662E1D}"
 EndProject
