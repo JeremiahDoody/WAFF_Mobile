@@ -43,7 +43,7 @@ namespace WAFF_Mobile
 		//first.name = "";
 
 		//init other global variables
-		int favoriteColorState = 0;
+		private int favoriteColorState = 0;
 		//ConsoleColor favoriteButtonDefaultColor;
 
 		protected override void OnCreate (Bundle bundle)
@@ -57,7 +57,16 @@ namespace WAFF_Mobile
 			tempList.Add ("2. Second movie.  50%");
 
 			//set buttons
-			leaderboardButton = FindViewById<Button> (Resource.Id.leaderboard);
+			leaderboardButton = FindViewById<Button> (Resource.Id.leaderboard_mainButton);
+
+			leaderboardButton.Click  += delegate
+			{
+				Intent i = new Intent(this, typeof(Activity_Leaderboard));
+				//go to Activity_Leaderboard.cs
+				StartActivity(i);
+
+			};//end listener
+
 			//set views
 			scrollView = FindViewById<ScrollView> (Resource.Id.mainScrollView);
 

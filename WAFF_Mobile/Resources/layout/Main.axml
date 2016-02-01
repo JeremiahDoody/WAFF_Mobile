@@ -4,11 +4,6 @@
     p1:layout_height="match_parent"
     p1:id="@+id/relativeLayout1"
     p1:scrollbars="vertical">
-    <resources>
-        <style
-            name="WaffUITheme"
-            parent="@android:style/Theme.Light" />
-    </resources>
     <ScrollView
         p1:minWidth="25px"
         p1:minHeight="25px"
@@ -39,7 +34,7 @@
         p1:textAlignment="viewStart"
         p1:layout_width="250.8dp"
         p1:layout_height="wrap_content"
-        p1:id="@+id/leaderboard"
+        p1:id="@+id/leaderboard_mainButton"
         p1:layout_marginBottom="0.0dp"
         p1:layout_alignParentBottom="true"
         p1:layout_alignParentLeft="true"
