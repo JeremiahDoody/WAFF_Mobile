@@ -41,9 +41,12 @@ namespace WAFF_Mobile
 			View view = convertView;
 			if (view == null) // no view is re-usable, so create a new one
 				view = context.LayoutInflater.Inflate(Resource.Layout.HomeRowLayout, null);
-			view.FindViewById<TextView>(Resource.Id.Text1).Text = item.Heading;
-			view.FindViewById<TextView>(Resource.Id.Text2).Text = item.SubHeading;
-			view.FindViewById<ImageView>(Resource.Id.Image).SetImageResource(item.ImageResourceId);
+//			view.FindViewById<TextView>(Resource.Id.Text1).Text = item.Heading;
+//			view.FindViewById<TextView>(Resource.Id.Text2).Text = item.SubHeading;
+//			view.FindViewById<ImageView>(Resource.Id.Image).SetImageResource(item.ImageResourceId);
+			view.FindViewById<TextView>(Resource.Id.Text1).Text = item.Name;
+			view.FindViewById<TextView>(Resource.Id.Text2).Text = item.Length;
+			view.FindViewById<ImageView>(Resource.Id.Image).SetImageResource(Resource.Drawable.star_off);
 			return view;
 		}
 	}//end class

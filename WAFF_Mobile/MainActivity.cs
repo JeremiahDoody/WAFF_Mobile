@@ -37,6 +37,7 @@ namespace WAFF_Mobile
 	
 		//private ArrayList tempList = new ArrayList();
 		List<MainTableItem01> tempList = new List<MainTableItem01>();
+		HomeScreenAdapter adapter;
 
 		//List<Film> filmList = new List<Film>();
 		//init buttons
@@ -85,7 +86,7 @@ namespace WAFF_Mobile
 					RunOnUiThread(() =>
 					{
 
-							string output = (lbCount+1) + ". " + tempList[lbCount].Heading;
+							string output = (lbCount+1) + ". " + tempList[lbCount].Name;
 							//set text
 							leaderboardButton.Text = output;
 							//change counter for next iteration
@@ -133,8 +134,8 @@ namespace WAFF_Mobile
 
 
 			ListView listView = FindViewById<ListView>(Resource.Id.listView1);
-
-			listView.Adapter = new HomeScreenAdapter(this, tempList);//, tableItems);
+			adapter = new HomeScreenAdapter(this, tempList);//, tableItems);
+			listView.Adapter = adapter;
 
 			Console.WriteLine ("listView height: " + listView.Height);
 
@@ -142,6 +143,7 @@ namespace WAFF_Mobile
 
 			//Setup the demo data
 			SetupDemoData ();
+
 
 
 			for(int i = 0; i<=10; i++)
@@ -204,44 +206,44 @@ namespace WAFF_Mobile
 			JSONArray array = new JSONArray(tempList);
 
 			MainTableItem01 item0 = new MainTableItem01 ();
-			item0.Heading = "This Tree Can Walk";
-			item0.SubHeading = "15 minutes";
-			item0.ImageResourceId = 2130837505;
+			item0.Name = "This Tree Can Walk";
+			item0.Length = "15 minutes";
+			item0.Favorited = false;
 
 			MainTableItem01 item1 = new MainTableItem01 ();
-			item1.Heading = "Marry's Home Film";
-			item1.SubHeading = "20 minutes";
-			item1.ImageResourceId = 2130837505;
+			item1.Name = "Marry's Home Film";
+			item1.Length = "20 minutes";
+			item1.Favorited = false;
 
 			MainTableItem01 item2 = new MainTableItem01 ();
-			item2.Heading = "Not Star Wars";
-			item2.SubHeading = "20 minutes";
-			item2.ImageResourceId = 2130837505;
+			item2.Name = "Not Star Wars";
+			item2.Length = "20 minutes";
+			item2.Favorited = false;
 
 			MainTableItem01 item3 = new MainTableItem01 ();
-			item3.Heading = "Variable Film";
-			item3.SubHeading = "20 minutes";
-			item3.ImageResourceId = 2130837505;
+			item3.Name = "Variable Film";
+			item3.Length = "20 minutes";
+			item3.Favorited = false;
 
 			MainTableItem01 item4 = new MainTableItem01 ();
-			item4.Heading = "Once Upon a Skyscrapper";
-			item4.SubHeading = "20 minutes";
-			item4.ImageResourceId = 2130837505;
+			item4.Name = "Once Upon a Skyscrapper";
+			item4.Length = "20 minutes";
+			item4.Favorited = false;
 
 			MainTableItem01 item5 = new MainTableItem01 ();
-			item5.Heading = "This Was A Film";
-			item5.SubHeading = "1 Hour";
-			item5.ImageResourceId = 2130837505;
+			item5.Name = "This Was A Film";
+			item5.Length = "1 Hour";
+			item5.Favorited = false;
 
 			MainTableItem01 item6 = new MainTableItem01 ();
-			item6.Heading = "Baking With Lily";
-			item6.SubHeading = "10 Hours";
-			item6.ImageResourceId = 2130837505;
+			item6.Name = "Baking With Lily";
+			item6.Length = "10 Hours";
+			item6.Favorited = false;
 
 			MainTableItem01 item7 = new MainTableItem01 ();
-			item7.Heading = "There and Back";
-			item7.SubHeading = "1:00PM - 2:00PM";
-			item7.ImageResourceId = 2130837505;
+			item7.Name = "There and Back";
+			item7.Length = "1:00PM - 2:00PM";
+			item7.Favorited = false;
 
 			tempList.Add (item0);
 			tempList.Add (item1);
@@ -251,6 +253,8 @@ namespace WAFF_Mobile
 			tempList.Add (item5);
 			tempList.Add (item6);
 			tempList.Add (item7);
+
+			adapter.NotifyDataSetChanged ();
 
 		}//end SetupDemoData() function
 
@@ -265,7 +269,7 @@ namespace WAFF_Mobile
 		{
 			var listView = sender as ListView;
 			var t = tempList[e.Position];
-			Android.Widget.Toast.MakeText(this, t.Heading + " - Playing in 10 minutes.", Android.Widget.ToastLength.Short).Show();
+			Android.Widget.Toast.MakeText(this, t.Name + " - Playing in 10 minutes.", Android.Widget.ToastLength.Short).Show();
 
 
 		}
