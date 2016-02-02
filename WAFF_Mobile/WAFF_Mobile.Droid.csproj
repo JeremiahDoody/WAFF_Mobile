@@ -76,9 +76,12 @@
     <AndroidResource Include="Resources\layout\ThankYou.axml" />
     <AndroidResource Include="Resources\layout\HomeRowLayout.axml" />
     <AndroidResource Include="Resources\drawable\unavailable.png" />
+    <AndroidResource Include="Resources\drawable\star_off.png" />
+    <AndroidResource Include="Resources\drawable\star_on.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
+    <Folder Include="Resources\menu\" />
   </ItemGroup>
 </Project>

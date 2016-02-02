@@ -41,13 +41,6 @@ namespace WAFF_Mobile
 		//List<Film> filmList = new List<Film>();
 		//init buttons
 		Button leaderboardButton, favoritesButton;
-		//init views
-		ScrollView scrollView;
-
-
-		//temp data
-		//Film first;
-		//first.name = "";
 
 		//init other global variables
 		private int favoriteColorState = 0;
