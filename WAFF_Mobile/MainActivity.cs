@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using System.Drawing;
 
 using Android.App;
 using Android.Content;
@@ -58,12 +59,16 @@ namespace WAFF_Mobile
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 
+			string title = "World Arts Film Festival " + DateTime.Now.Year.ToString();
+			this.Title = title;
+
 
 			//tempList.Add ("1. First movie.   50%");
 			//tempList.Add ("2. Second movie.  50%");
 
 			//set buttons
 			leaderboardButton = FindViewById<Button> (Resource.Id.leaderboard_mainButton);
+
 
 			leaderboardButton.Click  += delegate
 			{
@@ -87,9 +92,9 @@ namespace WAFF_Mobile
 					RunOnUiThread(() =>
 					{
 
-							/*
+							string output = (lbCount+1) + ". " + tempList[lbCount].Heading;
 							//set text
-							leaderboardButton.Text = tempList[lbCount].;
+							leaderboardButton.Text = output;
 							//change counter for next iteration
 							lbCount++;
 							//if too high set to 0.
@@ -97,8 +102,8 @@ namespace WAFF_Mobile
 								lbCount = 0;
 
 							Console.WriteLine("lbCount: " + lbCount);
-							Console.WriteLine("message: %d" + tempList[lbCount]);
-							*/
+							Console.WriteLine("message: " + output);
+
 					});
 
 
@@ -215,13 +220,46 @@ namespace WAFF_Mobile
 			item1.SubHeading = "20 minutes";
 			item1.ImageResourceId = 2130837505;
 
+			MainTableItem01 item2 = new MainTableItem01 ();
+			item2.Heading = "Not Star Wars";
+			item2.SubHeading = "20 minutes";
+			item2.ImageResourceId = 2130837505;
 
+			MainTableItem01 item3 = new MainTableItem01 ();
+			item3.Heading = "Variable Film";
+			item3.SubHeading = "20 minutes";
+			item3.ImageResourceId = 2130837505;
+
+			MainTableItem01 item4 = new MainTableItem01 ();
+			item4.Heading = "Once Upon a Skyscrapper";
+			item4.SubHeading = "20 minutes";
+			item4.ImageResourceId = 2130837505;
+
+			MainTableItem01 item5 = new MainTableItem01 ();
+			item5.Heading = "This Was A Film";
+			item5.SubHeading = "1 Hour";
+			item5.ImageResourceId = 2130837505;
+
+			MainTableItem01 item6 = new MainTableItem01 ();
+			item6.Heading = "Baking With Lily";
+			item6.SubHeading = "10 Hours";
+			item6.ImageResourceId = 2130837505;
+
+			MainTableItem01 item7 = new MainTableItem01 ();
+			item7.Heading = "There and Back";
+			item7.SubHeading = "1:00PM - 2:00PM";
+			item7.ImageResourceId = 2130837505;
 
 			tempList.Add (item0);
 			tempList.Add (item1);
+			tempList.Add (item2);
+			tempList.Add (item3);
+			tempList.Add (item4);
+			tempList.Add (item5);
+			tempList.Add (item6);
+			tempList.Add (item7);
 
-
-		}
+		}//end SetupDemoData() function
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 

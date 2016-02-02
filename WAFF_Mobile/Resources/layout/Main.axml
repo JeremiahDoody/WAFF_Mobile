@@ -11,7 +11,9 @@
         p1:layout_height="150px"
         p1:id="@+id/listView1"
         p1:layout_alignParentTop="true"
-        p1:layout_above="@+id/relativeLayout2" />
+        p1:layout_above="@+id/relativeLayout2"
+        p1:paddingRight="0dp"
+        p1:paddingLeft="0dp" />
     <RelativeLayout
         p1:minWidth="25px"
         p1:minHeight="25px"
@@ -21,21 +23,26 @@
         p1:layout_marginTop="0.0dp"
         p1:layout_alignParentBottom="true">
         <Button
+            p1:id="@+id/leaderboard_mainButton"
             p1:text="1. ..."
             p1:textAlignment="viewStart"
             p1:layout_width="wrap_content"
             p1:layout_height="wrap_content"
-            p1:id="@+id/leaderboard_mainButton"
             p1:layout_marginBottom="0.0dp"
             p1:layout_alignParentBottom="true"
             p1:layout_alignParentLeft="true"
-            p1:layout_toLeftOf="@+id/favorites" />
+            p1:gravity="left|center_vertical"
+            p1:layout_toLeftOf="@+id/favorites"
+            p1:paddingRight="20dp"
+            p1:paddingLeft="20dp" />
         <Button
+            p1:id="@+id/favorites"
             p1:text="@string/favOff"
             p1:layout_width="wrap_content"
             p1:layout_height="wrap_content"
-            p1:id="@+id/favorites"
             p1:layout_alignParentRight="true"
-            p1:layout_alignParentBottom="true" />
+            p1:layout_alignParentBottom="true"
+            p1:paddingRight="20dp"
+            p1:paddingLeft="20dp" />
     </RelativeLayout>
 </RelativeLayout>
