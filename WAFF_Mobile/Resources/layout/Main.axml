@@ -4,39 +4,38 @@
     p1:layout_height="match_parent"
     p1:id="@+id/relativeLayout1"
     p1:scrollbars="vertical">
-    <ScrollView
+    <ListView
         p1:minWidth="25px"
         p1:minHeight="25px"
-        p1:layout_width="343.2dp"
-        p1:layout_height="475.0dp"
-        p1:id="@+id/mainScrollView"
-        p1:layout_marginBottom="0.0dp"
+        p1:layout_width="wrap_content"
+        p1:layout_height="150px"
+        p1:id="@+id/listView1"
         p1:layout_alignParentTop="true"
-        p1:layout_marginLeft="0.0dp"
-        p1:layout_alignParentLeft="true"
-        p1:layout_alignParentRight="true">
-        <LinearLayout
-            p1:minWidth="25px"
-            p1:minHeight="25px"
-            p1:layout_width="match_parent"
-            p1:layout_height="match_parent"
-            p1:id="@+id/linearLayout2" />
-    </ScrollView>
-    <Button
-        p1:text="@string/favOff"
-        p1:layout_width="122.6dp"
-        p1:layout_height="wrap_content"
-        p1:id="@+id/favorites"
-        p1:layout_alignParentRight="true"
-        p1:layout_alignParentBottom="true" />
-    <Button
-        p1:text="1. ..."
-        p1:textAlignment="viewStart"
-        p1:layout_width="250.8dp"
-        p1:layout_height="wrap_content"
-        p1:id="@+id/leaderboard_mainButton"
-        p1:layout_marginBottom="0.0dp"
-        p1:layout_alignParentBottom="true"
-        p1:layout_alignParentLeft="true"
-        p1:layout_toLeftOf="@id/favorites" />
+        p1:layout_above="@+id/relativeLayout2" />
+    <RelativeLayout
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="wrap_content"
+        p1:layout_height="50.0dp"
+        p1:id="@+id/relativeLayout2"
+        p1:layout_marginTop="0.0dp"
+        p1:layout_alignParentBottom="true">
+        <Button
+            p1:text="1. ..."
+            p1:textAlignment="viewStart"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/leaderboard_mainButton"
+            p1:layout_marginBottom="0.0dp"
+            p1:layout_alignParentBottom="true"
+            p1:layout_alignParentLeft="true"
+            p1:layout_toLeftOf="@+id/favorites" />
+        <Button
+            p1:text="@string/favOff"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/favorites"
+            p1:layout_alignParentRight="true"
+            p1:layout_alignParentBottom="true" />
+    </RelativeLayout>
 </RelativeLayout>

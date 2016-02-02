@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Threading;
 
 using Android.App;
 using Android.Content;
@@ -6,14 +9,15 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using System.Collections.Generic;
-using System.Threading;
-using Mono;
-//using System.Windows.Media;
 using Android.Graphics.Drawables;
 using Android.Graphics;
 
+using Mono;
 
+//import JSON packages
+using Org.Json;
+using static Org.Json.JSONException;
+using static Org.Json.JSONTokener;
 
 
 namespace WAFF_Mobile
@@ -29,8 +33,10 @@ namespace WAFF_Mobile
 //			public String time;
 //		}
 
-		//int count = 1;//
-		List<String> tempList = new List<String>();
+	
+		//private ArrayList tempList = new ArrayList();
+		List<MainTableItem01> tempList = new List<MainTableItem01>();
+
 		//List<Film> filmList = new List<Film>();
 		//init buttons
 		Button leaderboardButton, favoritesButton;
@@ -49,12 +55,12 @@ namespace WAFF_Mobile
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 
-			tempList.Add ("1. First movie.   50%");
-			tempList.Add ("2. Second movie.  50%");
+
+			//tempList.Add ("1. First movie.   50%");
+			//tempList.Add ("2. Second movie.  50%");
 
 			//set buttons
 			leaderboardButton = FindViewById<Button> (Resource.Id.leaderboard_mainButton);
@@ -67,8 +73,11 @@ namespace WAFF_Mobile
 
 			};//end listener
 
+
+
 			//set views
-			scrollView = FindViewById<ScrollView> (Resource.Id.mainScrollView);
+			//scrollView = FindViewById<ScrollView> (Resource.Id.mainScrollView);
+
 
 			int lbCount = 0;
 
@@ -78,9 +87,9 @@ namespace WAFF_Mobile
 					RunOnUiThread(() =>
 					{
 
-
+							/*
 							//set text
-							leaderboardButton.Text = tempList[lbCount];
+							leaderboardButton.Text = tempList[lbCount].;
 							//change counter for next iteration
 							lbCount++;
 							//if too high set to 0.
@@ -89,6 +98,7 @@ namespace WAFF_Mobile
 
 							Console.WriteLine("lbCount: " + lbCount);
 							Console.WriteLine("message: %d" + tempList[lbCount]);
+							*/
 					});
 
 
@@ -118,80 +128,28 @@ namespace WAFF_Mobile
 					favoriteColorState = 0;
 				}
 			};//end listener
-
-			//*********TESTING**************
-
-//			// Get our button from the layout resource,
-//			// and attach an event to it
-//			Button button = FindViewById<Button> (Resource.Id.myButton);
-//			
-//			button.Click += delegate {
-//				button.Text = string.Format ("{0} clicks!", count++);
-//			};
-
-
-
-			// Creating a new RelativeLayout
-			//new RelativeLayout(this);
-			//relativeLayout.RemoveView ((ScrollView)relativeLayout.Parent);
-
-			// Defining the RelativeLayout layout parameters.
-			// In this case I want to fill its parent
-			//RelativeLayout.LayoutParams rlp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WrapContent, RelativeLayout.LayoutParams.WrapContent);
-
-			//rlp.AddRule (LayoutRules.);
-				//RelativeLayout.LayoutParams.FILL_PARENT,
-				//RelativeLayout.LayoutParams.FILL_PARENT);
+				
 
 
 
 
-			//lp.addRule(RelativeLayout.CENTER_IN_PARENT);
 
+			ListView listView = FindViewById<ListView>(Resource.Id.listView1);
 
+			listView.Adapter = new HomeScreenAdapter(this, tempList);//, tableItems);
 
-			// Setting the RelativeLayout as our content view
-			//SetContentView(relativeLayout, lp);
+			Console.WriteLine ("listView height: " + listView.Height);
 
-			LinearLayout linearLayout = FindViewById<LinearLayout>(Resource.Id.linearLayout2);
+			listView.ItemClick += OnListItemClick;
+
+			//Setup the demo data
+			SetupDemoData ();
+
 
 			for(int i = 0; i<=10; i++)
 			{
 				
-				Button btn1 = new Button (this);
-				btn1.Text = "btn" + i;
-				btn1.Id = i;
 
-				// Defining the layout parameters of the TextView
-				LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-					LinearLayout.LayoutParams.WrapContent,
-					LinearLayout.LayoutParams.WrapContent);
-
-
-
-				// Setting the parameters on the TextView
-				btn1.LayoutParameters = lp;
-
-				//set layout orientation
-				linearLayout.Orientation = Orientation.Vertical;
-
-				//ctrl-alt-space after term for auto import
-
-				//set border
-				GradientDrawable border = new GradientDrawable();
-				border.SetColor(0x7FFFFFFF); //white background
-				border.SetStroke(1, Color.Black); //black border with full opacity//0xFF000000
-				if(Build.VERSION.SdkInt < Android.OS.BuildVersionCodes.JellyBean) 
-				{
-					linearLayout.SetBackgroundDrawable(border);
-				} 
-				else 
-				{
-					linearLayout.SetBackgroundDrawable(border);
-				}
-
-				// Adding the TextView to the RelativeLayout as a child
-				linearLayout.AddView(btn1);
 
 			}//end temp for loop
 
@@ -235,7 +193,52 @@ namespace WAFF_Mobile
 			default:
 				return base.OnOptionsItemSelected(item);
 			}
+		}//end OnOptionsItemSelected()
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+		/// <summary>
+		/// Sets up temp demo data for tempList. Will be replaced later.
+		/// </summary>
+		private void SetupDemoData()
+		{
+
+			JSONArray array = new JSONArray(tempList);
+
+			MainTableItem01 item0 = new MainTableItem01 ();
+			item0.Heading = "This Tree Can Walk";
+			item0.SubHeading = "15 minutes";
+			item0.ImageResourceId = 2130837505;
+
+			MainTableItem01 item1 = new MainTableItem01 ();
+			item1.Heading = "Marry's Home Film";
+			item1.SubHeading = "20 minutes";
+			item1.ImageResourceId = 2130837505;
+
+
+
+			tempList.Add (item0);
+			tempList.Add (item1);
+
+
 		}
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+		/// <summary>
+		/// Raises the list item click event.
+		/// </summary>
+		/// <param name="sender">Sender.</param>
+		/// <param name="e">E.</param>
+		void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
+		{
+			var listView = sender as ListView;
+			var t = tempList[e.Position];
+			Android.Widget.Toast.MakeText(this, t.Heading + " - Playing in 10 minutes.", Android.Widget.ToastLength.Short).Show();
+
+
+		}
+
 
 	}
 }

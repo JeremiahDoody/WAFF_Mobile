@@ -51,6 +51,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Activity_ThankYou.cs" />
     <Compile Include="Activity_Leaderboard.cs" />
+    <Compile Include="HomeScreenAdapter.cs" />
+    <Compile Include="MainTableItem01.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -72,6 +74,11 @@
     <AndroidResource Include="Resources\layout\WaffUITheme.xml" />
     <AndroidResource Include="Resources\layout\Leaderboard.axml" />
     <AndroidResource Include="Resources\layout\ThankYou.axml" />
+    <AndroidResource Include="Resources\layout\HomeRowLayout.axml" />
+    <AndroidResource Include="Resources\drawable\unavailable.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
+  </ItemGroup>
 </Project>
