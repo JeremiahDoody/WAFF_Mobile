@@ -7,6 +7,7 @@ public class MainTableItem01
 	//public string SubHeading { get; set; }
 	//public int ImageResourceId { get; set; }
 
+	public int FilmID { get; set; }
 	public string Name { get; set; }
 	public string Genre { get; set; }
 	public string Description { get; set; }

@@ -34,6 +34,7 @@ namespace WAFF_Mobile
 //			public String time;
 //		}
 
+		public static MainActivity mainActivity;
 	
 		//private ArrayList tempList = new ArrayList();
 		List<MainTableItem01> tempList = new List<MainTableItem01>();
@@ -56,8 +57,6 @@ namespace WAFF_Mobile
 			string title = "World Arts Film Festival " + DateTime.Now.Year.ToString();
 			this.Title = title;
 
-			ToggleButton toggleButton = FindViewById<ToggleButton> (Resource.Id.nowPlayingToggleButton);
-			toggleButton.Activated = false;
 
 			//tempList.Add ("1. First movie.   50%");
 			//tempList.Add ("2. Second movie.  50%");
@@ -132,19 +131,26 @@ namespace WAFF_Mobile
 				
 
 
-
-
-
-			ListView listView = FindViewById<ListView>(Resource.Id.listView1);
-			adapter = new HomeScreenAdapter(this, tempList);//, tableItems);
-			listView.Adapter = adapter;
-
-			Console.WriteLine ("listView height: " + listView.Height);
-
-			listView.ItemClick += OnListItemClick;
-
 			//Setup the demo data
 			SetupDemoData ();
+
+			//setup list view ref
+			ListView listView = FindViewById<ListView>(Resource.Id.listView1);
+			//set up adapter
+			adapter = new HomeScreenAdapter(this, tempList);//, tableItems);
+			listView.Adapter = adapter;
+			adapter.NotifyDataSetChanged ();
+			//listView.Adapter = new HomeScreenAdapter(this, tempList);
+			Console.WriteLine ("listView height: " + listView.Height);
+
+			listView.ItemClick += OnListItemClick;//ItemClick
+			//View view = adapter.GetView();
+			//get the listView
+			//get row clicked
+			//get button clicked
+
+
+
 
 
 
@@ -178,6 +184,7 @@ namespace WAFF_Mobile
 		{
 			menu.Add(0,0,0,"Options");
 			//menu.add //Logout. NOTE: will need to hide logout buttons while user is not logged in, but will need to use another method to do so.
+			menu.Add(1,1,1,"Uninstall");
 			return true;
 		}
 
@@ -208,41 +215,49 @@ namespace WAFF_Mobile
 			JSONArray array = new JSONArray(tempList);
 
 			MainTableItem01 item0 = new MainTableItem01 ();
+			item0.FilmID = 0;
 			item0.Name = "This Tree Can Walk";
 			item0.Length = "15 minutes";
 			item0.Favorited = false;
 
 			MainTableItem01 item1 = new MainTableItem01 ();
-			item1.Name = "Marry's Home Film";
+			item1.FilmID = 1;
+			item1.Name = "Mary's Home Film";
 			item1.Length = "20 minutes";
 			item1.Favorited = false;
 
 			MainTableItem01 item2 = new MainTableItem01 ();
+			item2.FilmID = 2;
 			item2.Name = "Not Star Wars";
 			item2.Length = "20 minutes";
 			item2.Favorited = false;
 
 			MainTableItem01 item3 = new MainTableItem01 ();
+			item3.FilmID = 3;
 			item3.Name = "Variable Film";
 			item3.Length = "20 minutes";
 			item3.Favorited = false;
 
 			MainTableItem01 item4 = new MainTableItem01 ();
-			item4.Name = "Once Upon a Skyscrapper";
+			item4.FilmID = 4;
+			item4.Name = "Once Upon a SkyScrapper";
 			item4.Length = "20 minutes";
 			item4.Favorited = false;
 
 			MainTableItem01 item5 = new MainTableItem01 ();
+			item5.FilmID = 5;
 			item5.Name = "This Was A Film";
 			item5.Length = "1 Hour";
 			item5.Favorited = false;
 
 			MainTableItem01 item6 = new MainTableItem01 ();
+			item6.FilmID = 6;
 			item6.Name = "Baking With Lily";
 			item6.Length = "10 Hours";
 			item6.Favorited = false;
 
 			MainTableItem01 item7 = new MainTableItem01 ();
+			item7.FilmID = 7;
 			item7.Name = "There and Back";
 			item7.Length = "1:00PM - 2:00PM";
 			item7.Favorited = false;
@@ -256,7 +271,7 @@ namespace WAFF_Mobile
 			tempList.Add (item6);
 			tempList.Add (item7);
 
-			adapter.NotifyDataSetChanged ();
+//			adapter.NotifyDataSetChanged ();
 
 		}//end SetupDemoData() function
 
@@ -269,9 +284,11 @@ namespace WAFF_Mobile
 		/// <param name="e">E.</param>
 		void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
 		{
+
+			Console.WriteLine ("OnListItemClick >> In OnListItemClick");
 			var listView = sender as ListView;
 			var t = tempList[e.Position];
-			Android.Widget.Toast.MakeText(this, t.Name + " - Playing in 10 minutes.", Android.Widget.ToastLength.Short).Show();
+			Android.Widget.Toast.MakeText(this, t.Name + " - featured in 10 minutes.", Android.Widget.ToastLength.Short).Show();
 
 
 		}
