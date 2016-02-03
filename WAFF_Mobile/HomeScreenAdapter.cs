@@ -46,7 +46,7 @@ namespace WAFF_Mobile
 //			view.FindViewById<ImageView>(Resource.Id.Image).SetImageResource(item.ImageResourceId);
 			view.FindViewById<TextView>(Resource.Id.Text1).Text = item.Name;
 			view.FindViewById<TextView>(Resource.Id.Text2).Text = item.Length;
-			view.FindViewById<ImageView>(Resource.Id.Image).SetImageResource(Resource.Drawable.star_off);
+			//view.FindViewById<ImageView>(Resource.Id.Image).SetImageResource(Resource.Drawable.star_off);
 			return view;
 		}
 	}//end class

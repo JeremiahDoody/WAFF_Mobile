@@ -45,16 +45,19 @@ namespace WAFF_Mobile
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			public const int blank = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int star_off = 2130837505;
+			public const int Icon = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int star_on = 2130837506;
+			public const int star_off = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int unavailable = 2130837507;
+			public const int star_on = 2130837507;
+			
+			// aapt resource value: 0x7f020004
+			public const int unavailable = 2130837508;
 			
 			static Drawable()
 			{
@@ -72,9 +75,6 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f050005
 			public const int BackButtonContainer = 2131034117;
 			
-			// aapt resource value: 0x7f050003
-			public const int Image = 2131034115;
-			
 			// aapt resource value: 0x7f050000
 			public const int Text = 2131034112;
 			
@@ -84,23 +84,38 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f050002
 			public const int Text2 = 2131034114;
 			
-			// aapt resource value: 0x7f05000a
-			public const int favorites = 2131034122;
+			// aapt resource value: 0x7f050003
+			public const int favorite_button = 2131034115;
+			
+			// aapt resource value: 0x7f05000b
+			public const int favorites = 2131034123;
 			
 			// aapt resource value: 0x7f050006
 			public const int leaderboard_backButton = 2131034118;
 			
-			// aapt resource value: 0x7f050009
-			public const int leaderboard_mainButton = 2131034121;
+			// aapt resource value: 0x7f05000a
+			public const int leaderboard_mainButton = 2131034122;
+			
+			// aapt resource value: 0x7f05000c
+			public const int linearLayout1 = 2131034124;
 			
 			// aapt resource value: 0x7f050004
 			public const int listView1 = 2131034116;
 			
+			// aapt resource value: 0x7f050008
+			public const int nowPlayingToggleButton = 2131034120;
+			
 			// aapt resource value: 0x7f050007
 			public const int relativeLayout1 = 2131034119;
 			
-			// aapt resource value: 0x7f050008
-			public const int relativeLayout2 = 2131034120;
+			// aapt resource value: 0x7f050009
+			public const int relativeLayout2 = 2131034121;
+			
+			// aapt resource value: 0x7f05000d
+			public const int textView1 = 2131034125;
+			
+			// aapt resource value: 0x7f05000e
+			public const int textView2 = 2131034126;
 			
 			static Id()
 			{

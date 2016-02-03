@@ -15,16 +15,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#FF7F3300"
-            android:textSize="20dip"
+            android:textSize="30dip"
             android:textStyle="italic" />
         <TextView
             android:id="@+id/Text2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="14dip"
+            android:textSize="24dip"
             android:textColor="#FF267F00"
             android:paddingLeft="100dip" />
     </LinearLayout>
+<!--
     <ImageView
         android:id="@+id/Image"
         android:layout_width="48dp"
@@ -32,4 +33,14 @@
         android:padding="5dp"
         android:src="@drawable/icon"
         android:layout_alignParentRight="true" />
+        -->
+    <ImageButton
+        android:src="@drawable/star_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/favorite_button"
+        android:layout_alignParentRight="true"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/blank" />
 </RelativeLayout>

@@ -56,6 +56,8 @@ namespace WAFF_Mobile
 			string title = "World Arts Film Festival " + DateTime.Now.Year.ToString();
 			this.Title = title;
 
+			ToggleButton toggleButton = FindViewById<ToggleButton> (Resource.Id.nowPlayingToggleButton);
+			toggleButton.Activated = false;
 
 			//tempList.Add ("1. First movie.   50%");
 			//tempList.Add ("2. Second movie.  50%");
