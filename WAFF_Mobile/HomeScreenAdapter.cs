@@ -68,27 +68,23 @@ namespace WAFF_Mobile
 			imgButton.Focusable = false;
 			imgButton.FocusableInTouchMode = false;
 			imgButton.Clickable = true;
-			imgButton.SetOnClickListener(new View.OnClickListener()
-				{
-
-					public void onClick()
-					{
-
-
-					}
-
-
-				}) 
-			
-			
-			
-			
+			imgButton.Click => 
 			{
-				Android.Widget.Toast.MakeText (context, item.FilmID + " | Name for film: " + item.Name, Android.Widget.ToastLength.Short).Show ();
-			};
+
+
+
+
+				
+			
+			
+			
+			
+			
+				//Android.Widget.Toast.MakeText (context, item.FilmID + " | Name for film: " + item.Name, Android.Widget.ToastLength.Short).Show ();
+			
 				
 			//imgButton.Click += (sender, args) => 
-			{
+			
 				//Colors:
 				//Regular row gray: (157,157,163)
 				//Yellowish row:    (188,185,133)
@@ -96,7 +92,7 @@ namespace WAFF_Mobile
 				//Console.WriteLine ("HomeScreenAdapter >> GetView >> ImageButton " + position + " clicked. Favorited: " + item.Favorited);
 
 
-				Android.Widget.Toast.MakeText(context, item.FilmID + " | Name for film: " + item.Name, Android.Widget.ToastLength.Short).Show();
+				//Android.Widget.Toast.MakeText(context, item.FilmID + " | Name for film: " + item.Name, Android.Widget.ToastLength.Short).Show();
 				/*
 				if(item.Favorited == false)//catch null first
 				{
@@ -118,7 +114,7 @@ namespace WAFF_Mobile
 
 
 				//adding overlapping form controls
-			};
+				});
 
 
 			//return the view

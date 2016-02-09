@@ -21,4 +21,9 @@
         p1:layout_height="150dp"
         p1:id="@+id/textView2"
         p1:gravity="center" />
+    <Button
+        p1:text="Take a Quick Survey"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/button1" />
 </LinearLayout>

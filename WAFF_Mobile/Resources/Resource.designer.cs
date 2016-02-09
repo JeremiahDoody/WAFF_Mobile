@@ -84,6 +84,9 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f050002
 			public const int Text2 = 2131034114;
 			
+			// aapt resource value: 0x7f05000e
+			public const int button1 = 2131034126;
+			
 			// aapt resource value: 0x7f050003
 			public const int favorite_button = 2131034115;
 			
