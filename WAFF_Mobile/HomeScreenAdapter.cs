@@ -68,7 +68,7 @@ namespace WAFF_Mobile
 			imgButton.Focusable = false;
 			imgButton.FocusableInTouchMode = false;
 			imgButton.Clickable = true;
-			imgButton.Click => 
+			imgButton.Click += (sender, e) => 
 			{
 
 
@@ -114,7 +114,7 @@ namespace WAFF_Mobile
 
 
 				//adding overlapping form controls
-				});
+				};
 
 
 			//return the view
