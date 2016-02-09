@@ -136,8 +136,15 @@ namespace WAFF_Mobile
 
 			//setup list view ref
 			ListView listView = FindViewById<ListView>(Resource.Id.listView1);
+
+//			foreach (MainTableItem01 mt in tempList) {
+//
+//				Console.WriteLine ("MainActivity >> OnCreate() >> mt Film Name: " + mt.Name + ". FilmID: " + mt.FilmID);
+//
+//			}
+
 			//set up adapter
-			adapter = new HomeScreenAdapter(this, tempList);//, tableItems);
+			adapter = new HomeScreenAdapter(this, tempList);//(this, tableItems);
 			listView.Adapter = adapter;
 			adapter.NotifyDataSetChanged ();
 			//listView.Adapter = new HomeScreenAdapter(this, tempList);
@@ -185,6 +192,7 @@ namespace WAFF_Mobile
 			menu.Add(0,0,0,"Options");
 			//menu.add //Logout. NOTE: will need to hide logout buttons while user is not logged in, but will need to use another method to do so.
 			menu.Add(1,1,1,"Uninstall");
+			//SQLDataAdapter test;
 			return true;
 		}
 
@@ -271,6 +279,9 @@ namespace WAFF_Mobile
 			tempList.Add (item6);
 			tempList.Add (item7);
 
+
+
+
 //			adapter.NotifyDataSetChanged ();
 
 		}//end SetupDemoData() function
@@ -288,7 +299,7 @@ namespace WAFF_Mobile
 			Console.WriteLine ("OnListItemClick >> In OnListItemClick");
 			var listView = sender as ListView;
 			var t = tempList[e.Position];
-			Android.Widget.Toast.MakeText(this, t.Name + " - featured in 10 minutes.", Android.Widget.ToastLength.Short).Show();
+			Android.Widget.Toast.MakeText(this, t.Name + " - Playing in 10 minutes.", Android.Widget.ToastLength.Short).Show();
 
 
 		}
