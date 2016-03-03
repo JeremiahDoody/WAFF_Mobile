@@ -2,7 +2,9 @@
 <resources>
 	<string name="hello">Hello World, Click Me!</string>
 	<string name="app_name">WAFF_Mobile</string>
+  <string name="title">World Arts Film Festival</string>
 	<string name="options">Options</string>
 	<string name="favOff">Favorites ☆</string>
 	<string name="favOn">Favorites ★</string>
+  <string name="settings">Settings</string>
 </resources>

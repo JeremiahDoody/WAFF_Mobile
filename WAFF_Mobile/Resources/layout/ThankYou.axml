@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:p1="http://schemas.android.com/apk/res/android"
-    p1:orientation="vertical"
-    p1:minWidth="25px"
-    p1:minHeight="25px"
-    p1:layout_width="match_parent"
-    p1:layout_height="match_parent"
-    p1:id="@+id/linearLayout1"
-    p1:gravity="center">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayout1"
+    android:gravity="center">
     <TextView
-        p1:text="Thank You!"
-        p1:textAppearance="?android:attr/textAppearanceLarge"
-        p1:layout_width="match_parent"
-        p1:layout_height="80dp"
-        p1:id="@+id/textView1"
-        p1:gravity="center" />
+        android:text="Thank You!"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/textView1"
+        android:gravity="center" />
     <TextView
-        p1:text="Your vote for ... has been cast! Returning to Home Screen in "
-        p1:textAppearance="?android:attr/textAppearanceMedium"
-        p1:layout_width="match_parent"
-        p1:layout_height="150dp"
-        p1:id="@+id/textView2"
-        p1:gravity="center" />
+        android:text="Your vote for ... has been cast! Returning to Home Screen in "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/textView2"
+        android:gravity="center" />
     <Button
-        p1:text="Take a Quick Survey"
-        p1:layout_width="match_parent"
-        p1:layout_height="wrap_content"
-        p1:id="@+id/button1" />
+        android:text="Take a Quick Survey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1" />
 </LinearLayout>

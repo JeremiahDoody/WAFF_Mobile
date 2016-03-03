@@ -12,6 +12,7 @@ using Android.Widget;
 using Android.OS;
 using Android.Graphics.Drawables;
 using Android.Graphics;
+using Android.Support.V7.AppCompat;
 
 using Xamarin;
 using Xamarin.Forms;
@@ -28,6 +29,7 @@ namespace WAFF_Mobile
 {
 	[Activity (Label = "WAFF_Mobile", MainLauncher = true, Icon = "@drawable/icon", Theme="@style/Theme.AppCompatActivity", ParentActivity = typeof(MainActivity))]
     [Register ("com.WAFF_Mobile.MainActivity")] //sets the source activity for the action bar
+    [Register("android/app/ActionBar",DoNotGenerateAcw=true)] 
     [MetaData ("android.support.PARENT_ACTIVITY", Value="WAFF_Mobile.MainActivity")] //Sets the action bars Parent Activity for older versions < v4.1
 	public class MainActivity : Activity
 	{
@@ -50,13 +52,22 @@ namespace WAFF_Mobile
 		//init other global variables
 		private int favoriteColorState = 0;
 		//ConsoleColor favoriteButtonDefaultColor;
-        
 
-		protected override void OnCreate (Bundle bundle)
+        /*public override ActionBar ActionBar
+        {
+            get{return base.ActionBar;}
+
+        }*/
+
+        protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate (bundle);
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
+
+            //sets the Toolbar/ActionBar with backward compatibility
+            Android.Widget.Toolbar waffToolbar = (Toolbar)FindViewById(Resource.Id.WAFF_toolbar);
+            SetActionBar(waffToolbar);
 
 			string title = "World Arts Film Festival " + DateTime.Now.Year.ToString();
 			this.Title = title;
@@ -70,7 +81,6 @@ namespace WAFF_Mobile
 
 			//set buttons
 			var leaderboardButton = FindViewById<Android.Widget.Button> (Resource.Id.leaderboard_mainButton);
-
 
 			leaderboardButton.Click  += delegate
 			{
@@ -142,7 +152,7 @@ namespace WAFF_Mobile
 			SetupDemoData ();
 
 			//setup list view ref
-			Android.Widget.ListView listView = FindViewById<Android.Widget.ListView>(Resource.Id.listView1);
+		    Android.Widget.ListView listView = FindViewById<Android.Widget.ListView>(Resource.Id.listView1);
 
 //			foreach (MainTableItem01 mt in tempList) {
 //
@@ -170,19 +180,6 @@ namespace WAFF_Mobile
 
 		}//end onCreate() method
 
-        public void OnStart()
-        {
-            base.OnStart();
-        }
-
-        //Implements the IMenuSelected interface for ContentFragment
-        public void OnMenuSelected(string text)
-        {
-            //var contentFragment = Fragment.FindFragmentById(Resource.Id.content) as ContentFragment;
-
-            //contentFragment.Update(ActionBar);
-        }
-
 //		private void tmrUpdate(System.Object sender, System.EventArgs e)
 //		{
 //
@@ -193,18 +190,15 @@ namespace WAFF_Mobile
 //			}
 //
 //		}
-//
+
 		//used to add menu to main page
 		public override bool OnCreateOptionsMenu(IMenu menu)
 		{
             MenuInflater.Inflate(Resource.Menu.Options, menu);
-			menu.Add(0,0,0,"Options");
-			//menu.add //Logout. NOTE: will need to hide logout buttons while user is not logged in, but will need to use another method to do so.
-
-			menu.Add(1,1,1,"Uninstall");
-			//SQLDataAdapter test;
-
-			menu.Add (0, 3, 3, "Log Out");//
+			menu.Add(0,0,0,"Favorites");
+			menu.Add(1,1,1,"Refresh");
+            menu.Add(2, 2, 2, "Settings");
+			menu.Add (0, 3, 3, "Uninstall");
 			return true;
 		}
 
@@ -213,10 +207,18 @@ namespace WAFF_Mobile
 		{
           switch (item.ItemId)
 			{
-				case Resource.Id.action_bar: 
+				case Resource.Id.action_favorites:
+                    //mark the current item as favorite
 					return true;
 				case Resource.Id.action_refresh: //allows the user to refresh
+                    //refresh the current 
 					return true;
+              case Resource.Id.action_settings:
+                    //show the app settings UI
+                    return true;
+              case Resource.Id.action_uninstall:
+                    //run the installation package
+                    return true;
 				default:
 					return base.OnOptionsItemSelected(item);
 			}

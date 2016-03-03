@@ -4968,8 +4968,11 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f090041
 			public const int Title = 2131296321;
 			
-			// aapt resource value: 0x7f090100
-			public const int action0 = 2131296512;
+			// aapt resource value: 0x7f0900ed
+			public const int WAFF_toolbar = 2131296493;
+			
+			// aapt resource value: 0x7f0900ff
+			public const int action0 = 2131296511;
 			
 			// aapt resource value: 0x7f09007a
 			public const int action_bar = 2131296378;
@@ -4995,8 +4998,11 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f09007b
 			public const int action_context_bar = 2131296379;
 			
-			// aapt resource value: 0x7f090104
-			public const int action_divider = 2131296516;
+			// aapt resource value: 0x7f090103
+			public const int action_divider = 2131296515;
+			
+			// aapt resource value: 0x7f090119
+			public const int action_favorites = 2131296537;
 			
 			// aapt resource value: 0x7f0900bd
 			public const int action_fragment = 2131296445;
@@ -5016,8 +5022,11 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f09005c
 			public const int action_mode_close_button = 2131296348;
 			
-			// aapt resource value: 0x7f090119
-			public const int action_refresh = 2131296537;
+			// aapt resource value: 0x7f090118
+			public const int action_refresh = 2131296536;
+			
+			// aapt resource value: 0x7f09011a
+			public const int action_settings = 2131296538;
 			
 			// aapt resource value: 0x7f090038
 			public const int activated = 2131296312;
@@ -5031,23 +5040,23 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f09002e
 			public const int always = 2131296302;
 			
-			// aapt resource value: 0x7f0900f8
-			public const int art = 2131296504;
-			
-			// aapt resource value: 0x7f090115
-			public const int background_color = 2131296533;
-			
-			// aapt resource value: 0x7f090118
-			public const int background_dim = 2131296536;
-			
-			// aapt resource value: 0x7f090117
-			public const int background_imagein = 2131296535;
-			
-			// aapt resource value: 0x7f090116
-			public const int background_imageout = 2131296534;
+			// aapt resource value: 0x7f0900f7
+			public const int art = 2131296503;
 			
 			// aapt resource value: 0x7f090114
-			public const int background_theme = 2131296532;
+			public const int background_color = 2131296532;
+			
+			// aapt resource value: 0x7f090117
+			public const int background_dim = 2131296535;
+			
+			// aapt resource value: 0x7f090116
+			public const int background_imagein = 2131296534;
+			
+			// aapt resource value: 0x7f090115
+			public const int background_imageout = 2131296533;
+			
+			// aapt resource value: 0x7f090113
+			public const int background_theme = 2131296531;
 			
 			// aapt resource value: 0x7f09002b
 			public const int beginning = 2131296299;
@@ -5088,17 +5097,17 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f09009b
 			public const int button = 2131296411;
 			
-			// aapt resource value: 0x7f090113
-			public const int button1 = 2131296531;
+			// aapt resource value: 0x7f090112
+			public const int button1 = 2131296530;
 			
 			// aapt resource value: 0x7f090064
 			public const int buttonPanel = 2131296356;
 			
-			// aapt resource value: 0x7f0900fd
-			public const int buttons = 2131296509;
+			// aapt resource value: 0x7f0900fc
+			public const int buttons = 2131296508;
 			
-			// aapt resource value: 0x7f090101
-			public const int cancel_action = 2131296513;
+			// aapt resource value: 0x7f090100
+			public const int cancel_action = 2131296512;
 			
 			// aapt resource value: 0x7f09004f
 			public const int center = 2131296335;
@@ -5112,8 +5121,8 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f090072
 			public const int checkbox = 2131296370;
 			
-			// aapt resource value: 0x7f090107
-			public const int chronometer = 2131296519;
+			// aapt resource value: 0x7f090106
+			public const int chronometer = 2131296518;
 			
 			// aapt resource value: 0x7f090053
 			public const int clip_horizontal = 2131296339;
@@ -5126,9 +5135,6 @@ namespace WAFF_Mobile
 			
 			// aapt resource value: 0x7f0900d9
 			public const int container_list = 2131296473;
-			
-			// aapt resource value: 0x7f0900ee
-			public const int content = 2131296494;
 			
 			// aapt resource value: 0x7f09006a
 			public const int contentPanel = 2131296362;
@@ -5178,8 +5184,8 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f090060
 			public const int default_activity_button = 2131296352;
 			
-			// aapt resource value: 0x7f0900f7
-			public const int default_control_frame = 2131296503;
+			// aapt resource value: 0x7f0900f6
+			public const int default_control_frame = 2131296502;
 			
 			// aapt resource value: 0x7f0900c9
 			public const int description = 2131296457;
@@ -5232,8 +5238,8 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f09001f
 			public const int disableHome = 2131296287;
 			
-			// aapt resource value: 0x7f0900fe
-			public const int disconnect = 2131296510;
+			// aapt resource value: 0x7f0900fd
+			public const int disconnect = 2131296509;
 			
 			// aapt resource value: 0x7f0900a0
 			public const int dummy = 2131296416;
@@ -5244,8 +5250,8 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f09002c
 			public const int end = 2131296300;
 			
-			// aapt resource value: 0x7f09010b
-			public const int end_padder = 2131296523;
+			// aapt resource value: 0x7f09010a
+			public const int end_padder = 2131296522;
 			
 			// aapt resource value: 0x7f090048
 			public const int enterAlways = 2131296328;
@@ -5277,8 +5283,8 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f090093
 			public const int favorite_button = 2131296403;
 			
-			// aapt resource value: 0x7f0900f1
-			public const int favorites = 2131296497;
+			// aapt resource value: 0x7f0900f0
+			public const int favorites = 2131296496;
 			
 			// aapt resource value: 0x7f090055
 			public const int fill = 2131296341;
@@ -5349,8 +5355,8 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f090062
 			public const int icon = 2131296354;
 			
-			// aapt resource value: 0x7f09010c
-			public const int icon_frame = 2131296524;
+			// aapt resource value: 0x7f09010b
+			public const int icon_frame = 2131296523;
 			
 			// aapt resource value: 0x7f090030
 			public const int ifRoom = 2131296304;
@@ -5472,23 +5478,23 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f0900eb
 			public const int leaderboard_backButton = 2131296491;
 			
-			// aapt resource value: 0x7f0900f0
-			public const int leaderboard_mainButton = 2131296496;
+			// aapt resource value: 0x7f0900ef
+			public const int leaderboard_mainButton = 2131296495;
 			
 			// aapt resource value: 0x7f090044
 			public const int left = 2131296324;
 			
-			// aapt resource value: 0x7f090105
-			public const int line1 = 2131296517;
+			// aapt resource value: 0x7f090104
+			public const int line1 = 2131296516;
 			
-			// aapt resource value: 0x7f090109
-			public const int line3 = 2131296521;
+			// aapt resource value: 0x7f090108
+			public const int line3 = 2131296520;
 			
-			// aapt resource value: 0x7f090110
-			public const int linearLayout1 = 2131296528;
+			// aapt resource value: 0x7f09010f
+			public const int linearLayout1 = 2131296527;
 			
-			// aapt resource value: 0x7f09010e
-			public const int list = 2131296526;
+			// aapt resource value: 0x7f09010d
+			public const int list = 2131296525;
 			
 			// aapt resource value: 0x7f09001c
 			public const int listMode = 2131296284;
@@ -5496,8 +5502,8 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f0900e9
 			public const int listView1 = 2131296489;
 			
-			// aapt resource value: 0x7f09010d
-			public const int list_container = 2131296525;
+			// aapt resource value: 0x7f09010c
+			public const int list_container = 2131296524;
 			
 			// aapt resource value: 0x7f090061
 			public const int list_item = 2131296353;
@@ -5514,23 +5520,20 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f090042
 			public const int maxLines = 2131296322;
 			
-			// aapt resource value: 0x7f090103
-			public const int media_actions = 2131296515;
+			// aapt resource value: 0x7f090102
+			public const int media_actions = 2131296514;
 			
-			// aapt resource value: 0x7f0900f6
-			public const int media_route_control_frame = 2131296502;
+			// aapt resource value: 0x7f0900f5
+			public const int media_route_control_frame = 2131296501;
 			
-			// aapt resource value: 0x7f0900f2
-			public const int media_route_list = 2131296498;
+			// aapt resource value: 0x7f0900f1
+			public const int media_route_list = 2131296497;
+			
+			// aapt resource value: 0x7f0900fa
+			public const int media_route_volume_layout = 2131296506;
 			
 			// aapt resource value: 0x7f0900fb
-			public const int media_route_volume_layout = 2131296507;
-			
-			// aapt resource value: 0x7f0900fc
-			public const int media_route_volume_slider = 2131296508;
-			
-			// aapt resource value: 0x7f0900ed
-			public const int menu = 2131296493;
+			public const int media_route_volume_slider = 2131296507;
 			
 			// aapt resource value: 0x7f0900aa
 			public const int message = 2131296426;
@@ -5568,8 +5571,8 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f09004e
 			public const int pin = 2131296334;
 			
-			// aapt resource value: 0x7f0900f9
-			public const int play_pause = 2131296505;
+			// aapt resource value: 0x7f0900f8
+			public const int play_pause = 2131296504;
 			
 			// aapt resource value: 0x7f0900ca
 			public const int playback_progress = 2131296458;
@@ -5586,14 +5589,14 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f0900ec
 			public const int relativeLayout1 = 2131296492;
 			
-			// aapt resource value: 0x7f0900ef
-			public const int relativeLayout2 = 2131296495;
+			// aapt resource value: 0x7f0900ee
+			public const int relativeLayout2 = 2131296494;
 			
 			// aapt resource value: 0x7f090045
 			public const int right = 2131296325;
 			
-			// aapt resource value: 0x7f0900f4
-			public const int route_name = 2131296500;
+			// aapt resource value: 0x7f0900f3
+			public const int route_name = 2131296499;
 			
 			// aapt resource value: 0x7f0900c7
 			public const int row_content = 2131296455;
@@ -5664,8 +5667,8 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f090039
 			public const int selected = 2131296313;
 			
-			// aapt resource value: 0x7f0900f5
-			public const int settings = 2131296501;
+			// aapt resource value: 0x7f0900f4
+			public const int settings = 2131296500;
 			
 			// aapt resource value: 0x7f090073
 			public const int shortcut = 2131296371;
@@ -5706,41 +5709,41 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f090046
 			public const int start = 2131296326;
 			
-			// aapt resource value: 0x7f090102
-			public const int status_bar_latest_event_content = 2131296514;
+			// aapt resource value: 0x7f090101
+			public const int status_bar_latest_event_content = 2131296513;
 			
-			// aapt resource value: 0x7f0900ff
-			public const int stop = 2131296511;
+			// aapt resource value: 0x7f0900fe
+			public const int stop = 2131296510;
 			
 			// aapt resource value: 0x7f090085
 			public const int submit_area = 2131296389;
 			
-			// aapt resource value: 0x7f0900fa
-			public const int subtitle = 2131296506;
+			// aapt resource value: 0x7f0900f9
+			public const int subtitle = 2131296505;
 			
-			// aapt resource value: 0x7f09010f
-			public const int switchWidget = 2131296527;
+			// aapt resource value: 0x7f09010e
+			public const int switchWidget = 2131296526;
 			
 			// aapt resource value: 0x7f09001e
 			public const int tabMode = 2131296286;
 			
-			// aapt resource value: 0x7f09010a
-			public const int text = 2131296522;
+			// aapt resource value: 0x7f090109
+			public const int text = 2131296521;
 			
-			// aapt resource value: 0x7f090108
-			public const int text2 = 2131296520;
+			// aapt resource value: 0x7f090107
+			public const int text2 = 2131296519;
 			
 			// aapt resource value: 0x7f09006d
 			public const int textSpacerNoButtons = 2131296365;
 			
+			// aapt resource value: 0x7f090110
+			public const int textView1 = 2131296528;
+			
 			// aapt resource value: 0x7f090111
-			public const int textView1 = 2131296529;
+			public const int textView2 = 2131296529;
 			
-			// aapt resource value: 0x7f090112
-			public const int textView2 = 2131296530;
-			
-			// aapt resource value: 0x7f090106
-			public const int time = 2131296518;
+			// aapt resource value: 0x7f090105
+			public const int time = 2131296517;
 			
 			// aapt resource value: 0x7f090063
 			public const int title = 2131296355;
@@ -5748,8 +5751,8 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f0900e4
 			public const int title_badge = 2131296484;
 			
-			// aapt resource value: 0x7f0900f3
-			public const int title_bar = 2131296499;
+			// aapt resource value: 0x7f0900f2
+			public const int title_bar = 2131296498;
 			
 			// aapt resource value: 0x7f0900e5
 			public const int title_orb = 2131296485;
@@ -5772,8 +5775,8 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f09001a
 			public const int transitionPosition = 2131296282;
 			
-			// aapt resource value: 0x7f09011a
-			public const int uninstall = 2131296538;
+			// aapt resource value: 0x7f09011b
+			public const int uninstall = 2131296539;
 			
 			// aapt resource value: 0x7f090009
 			public const int up = 2131296265;
@@ -6386,11 +6389,11 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f0b0043
 			public const int character_counter_pattern = 2131427395;
 			
-			// aapt resource value: 0x7f0b0049
-			public const int favOff = 2131427401;
-			
 			// aapt resource value: 0x7f0b004a
-			public const int favOn = 2131427402;
+			public const int favOff = 2131427402;
+			
+			// aapt resource value: 0x7f0b004b
+			public const int favOn = 2131427403;
 			
 			// aapt resource value: 0x7f0b0046
 			public const int hello = 2131427398;
@@ -6524,14 +6527,20 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f0b000c
 			public const int mr_user_route_category_name = 2131427340;
 			
-			// aapt resource value: 0x7f0b0048
-			public const int options = 2131427400;
+			// aapt resource value: 0x7f0b0049
+			public const int options = 2131427401;
 			
 			// aapt resource value: 0x7f0b003d
 			public const int orb_search_action = 2131427389;
 			
+			// aapt resource value: 0x7f0b004c
+			public const int settings = 2131427404;
+			
 			// aapt resource value: 0x7f0b0020
 			public const int status_bar_notification_info_overflow = 2131427360;
+			
+			// aapt resource value: 0x7f0b0048
+			public const int title = 2131427400;
 			
 			// aapt resource value: 0x7f0b0000
 			public const int v7_preference_off = 2131427328;

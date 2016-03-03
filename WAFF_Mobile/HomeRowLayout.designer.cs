@@ -4,7 +4,8 @@ using Android.Widget;
 using Android.Views;
 using WAFF_Mobile.Extensions;
 namespace WAFF_Mobile {
-	partial class HomeRowLayout {
+	partial class HomeRowLayout
+    {
 		private LinearLayout _text;
 		public LinearLayout Text { get { return _text ?? (_text =  this.FindViewById<LinearLayout>(Resource.Id.Text)); } }
 		private TextView _text1;
