@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:id="@+id/relativeLayout1"
     p1:layout_width="match_parent"
     p1:layout_height="match_parent"
-    p1:id="@+id/relativeLayout1"
     p1:scrollbars="vertical">
+    <fragment
+        p1:name="WAFF_Mobile.MenuFragment"
+        p1:id="@+id/menu"
+        p1:layout_weight="2"
+        p1:layout_width="match_parent"
+        p1:layout_height="match_parent" />
+    <fragment
+        p1:name="WAFF_Mobile.ContentFragment"
+        p1:id="@+id/content"
+        p1:layout_weight="1"
+        p1:layout_width="match_parent"
+        p1:layout_height="match_parent" />
+<!--This code is designed to allow a customized Toolbar rather than the built-in ActionBar...
+    beware older than Android 5.0 may not be compatible with the new Toolbar type
+    <android.support.v7.widget.Toolbar
+      android:id="@+id/WAFF_Toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:backround="?attr/colorPrimary"
+      android:elevation="4dp"
+      android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+      app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+  -->
     <ListView
         p1:minWidth="25px"
         p1:minHeight="25px"
@@ -25,7 +48,7 @@
         p1:layout_alignParentBottom="true">
         <Button
             p1:id="@+id/leaderboard_mainButton"
-            p1:text="1. ..."
+            p1:text="Leaderboard"
             p1:textAlignment="viewStart"
             p1:layout_width="wrap_content"
             p1:layout_height="wrap_content"

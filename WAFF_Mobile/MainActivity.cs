@@ -13,28 +13,31 @@ using Android.OS;
 using Android.Graphics.Drawables;
 using Android.Graphics;
 
-using Mono;
+using Xamarin;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
 
 //import JSON packages
 using Org.Json;
-using static Org.Json.JSONException;
-using static Org.Json.JSONTokener;
+//using Org.Json.JSONException;
+//using Org.Json.JSONTokener;
 
 
 namespace WAFF_Mobile
 {
-
-	 
-
-	[Activity (Label = "WAFF_Mobile", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "WAFF_Mobile", MainLauncher = true, Icon = "@drawable/icon", Theme="@style/Theme.AppCompatActivity", ParentActivity = typeof(MainActivity))]
+    [Register ("com.WAFF_Mobile.MainActivity")] //sets the source activity for the action bar
+    [MetaData ("android.support.PARENT_ACTIVITY", value="WAFF_Mobile.MainActivity")] //Sets the action bars Parent Activity for older versions < v4.1
 	public class MainActivity : Activity
 	{
+        //public override Intent SupportParentActivityIntent { get { return new Intent(this, typeof(MainActivity)); } }
+
 //		public struct Film{
 //			public String name;
 //			public String time;
 //		}
-
-		public static MainActivity mainActivity;
+		public static MainActivity mainActivity; 
 	
 		//private ArrayList tempList = new ArrayList();
 		List<MainTableItem01> tempList = new List<MainTableItem01>();
@@ -42,11 +45,12 @@ namespace WAFF_Mobile
 
 		//List<Film> filmList = new List<Film>();
 		//init buttons
-		Button leaderboardButton, favoritesButton;
+		Xamarin.Forms.Button leaderboardButton, favoritesButton;
 
 		//init other global variables
 		private int favoriteColorState = 0;
 		//ConsoleColor favoriteButtonDefaultColor;
+        
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -57,6 +61,9 @@ namespace WAFF_Mobile
 			string title = "World Arts Film Festival " + DateTime.Now.Year.ToString();
 			this.Title = title;
 
+            //Xamarin built-in Navigation Bar using crosslight reference
+            this.ActionBar.Title = FindViewById(Resource.Id.Options);
+            SupportActionBar.Title = FindViewById(Resource.Id.Options);
 
 			//tempList.Add ("1. First movie.   50%");
 			//tempList.Add ("2. Second movie.  50%");
@@ -156,11 +163,6 @@ namespace WAFF_Mobile
 			//get row clicked
 			//get button clicked
 
-
-
-
-
-
 			for(int i = 0; i<=10; i++)
 			{
 				
@@ -168,9 +170,20 @@ namespace WAFF_Mobile
 
 			}//end temp for loop
 
-
-
 		}//end onCreate() method
+
+        public void OnStart()
+        {
+            base.OnStart();
+        }
+
+        //Implements the IMenuSelected interface for ContentFragment
+        public void OnMenuSelected(string text)
+        {
+            var contentFragment = SupportFragmentManager.FindFragmentById(Resource.Id.content) as ContentFragment;
+
+            contentFragment.Update(test);
+        }
 
 //		private void tmrUpdate(System.Object sender, System.EventArgs e)
 //		{
@@ -183,34 +196,35 @@ namespace WAFF_Mobile
 //
 //		}
 //
-
-
-
 		//used to add menu to main page
 		public override bool OnCreateOptionsMenu(IMenu menu)
 		{
+            MenuInflater.Inflate(Resource.Menu.Options, menu);
 			menu.Add(0,0,0,"Options");
 			//menu.add //Logout. NOTE: will need to hide logout buttons while user is not logged in, but will need to use another method to do so.
+
 			menu.Add(1,1,1,"Uninstall");
 			//SQLDataAdapter test;
+
+			menu.Add (0, 3, 3, "Log Out");//
 			return true;
 		}
 
 		//dictates what happens for those menu buttons
 		public override bool OnOptionsItemSelected(IMenuItem item)
 		{
-			switch (item.ItemId)
+          switch (item.ItemId)
 			{
-			case 0: //Do stuff for button 0
-				//TODO... add functinality for Options menu item
-				return true;
-			case 1: //Do stuff for button 1
-				//TODO... add functinality for LogOut menu item
-				return true;
-			default:
-				return base.OnOptionsItemSelected(item);
+				case Resource.Id.action_bar: 
+					return true;
+				case Resource.Id.action_refresh: //allows the user to refresh
+					return true;
+				default:
+					return base.OnOptionsItemSelected(item);
 			}
+			return base.OnOptionsItemSelected(item);
 		}//end OnOptionsItemSelected()
+
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
