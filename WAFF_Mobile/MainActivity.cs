@@ -28,7 +28,7 @@ namespace WAFF_Mobile
 {
 	[Activity (Label = "WAFF_Mobile", MainLauncher = true, Icon = "@drawable/icon", Theme="@style/Theme.AppCompatActivity", ParentActivity = typeof(MainActivity))]
     [Register ("com.WAFF_Mobile.MainActivity")] //sets the source activity for the action bar
-    [MetaData ("android.support.PARENT_ACTIVITY", value="WAFF_Mobile.MainActivity")] //Sets the action bars Parent Activity for older versions < v4.1
+    [MetaData ("android.support.PARENT_ACTIVITY", Value="WAFF_Mobile.MainActivity")] //Sets the action bars Parent Activity for older versions < v4.1
 	public class MainActivity : Activity
 	{
         //public override Intent SupportParentActivityIntent { get { return new Intent(this, typeof(MainActivity)); } }
@@ -62,14 +62,14 @@ namespace WAFF_Mobile
 			this.Title = title;
 
             //Xamarin built-in Navigation Bar using crosslight reference
-            this.ActionBar.Title = FindViewById(Resource.Id.Options);
-            SupportActionBar.Title = FindViewById(Resource.Id.Options);
+            //this.ActionBar.Title = FindViewById(Resource.Id.action_bar_title);
+            //SupportActionBar = FindViewById(Resource.Id.); //this doesn't appear to be supported...ironic
 
 			//tempList.Add ("1. First movie.   50%");
 			//tempList.Add ("2. Second movie.  50%");
 
 			//set buttons
-			leaderboardButton = FindViewById<Button> (Resource.Id.leaderboard_mainButton);
+			var leaderboardButton = FindViewById<Android.Widget.Button> (Resource.Id.leaderboard_mainButton);
 
 
 			leaderboardButton.Click  += delegate
@@ -112,7 +112,7 @@ namespace WAFF_Mobile
 			}, null, 0, 10000);
 
 
-			favoritesButton = FindViewById<Button> (Resource.Id.favorites);
+			var favoritesButton = FindViewById<Android.Widget.Button> (Resource.Id.favorite_button);
 			//get starting color of favorite button (will be the default)
 			//favoriteButtonDefaultColor = new SolidColorBrush(favoritesButton.Background);
 			//now set to off option.
@@ -142,7 +142,7 @@ namespace WAFF_Mobile
 			SetupDemoData ();
 
 			//setup list view ref
-			ListView listView = FindViewById<ListView>(Resource.Id.listView1);
+			Android.Widget.ListView listView = FindViewById<Android.Widget.ListView>(Resource.Id.listView1);
 
 //			foreach (MainTableItem01 mt in tempList) {
 //
@@ -165,8 +165,6 @@ namespace WAFF_Mobile
 
 			for(int i = 0; i<=10; i++)
 			{
-				
-
 
 			}//end temp for loop
 
@@ -180,9 +178,9 @@ namespace WAFF_Mobile
         //Implements the IMenuSelected interface for ContentFragment
         public void OnMenuSelected(string text)
         {
-            var contentFragment = SupportFragmentManager.FindFragmentById(Resource.Id.content) as ContentFragment;
+            //var contentFragment = Fragment.FindFragmentById(Resource.Id.content) as ContentFragment;
 
-            contentFragment.Update(test);
+            //contentFragment.Update(ActionBar);
         }
 
 //		private void tmrUpdate(System.Object sender, System.EventArgs e)
@@ -311,7 +309,7 @@ namespace WAFF_Mobile
 		{
 
 			Console.WriteLine ("OnListItemClick >> In OnListItemClick");
-			var listView = sender as ListView;
+			var listView = sender as Xamarin.Forms.ListView;
 			var t = tempList[e.Position];
 			Android.Widget.Toast.MakeText(this, t.Name + " - Playing in 10 minutes.", Android.Widget.ToastLength.Short).Show();
 

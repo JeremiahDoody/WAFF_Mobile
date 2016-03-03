@@ -5,7 +5,4 @@
 	    android:icon="@drawable/ic_action_refresh" />
 	<item android:id="@+id/uninstall"
         android:title="Uninstall" />
-  <itme android:id="@+id/logout"
-        android:title="Logout"
-        android:icon="@drawable/action_logout" />
 </menu>

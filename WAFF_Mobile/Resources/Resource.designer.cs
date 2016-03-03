@@ -5772,6 +5772,9 @@ namespace WAFF_Mobile
 			// aapt resource value: 0x7f09001a
 			public const int transitionPosition = 2131296282;
 			
+			// aapt resource value: 0x7f09011a
+			public const int uninstall = 2131296538;
+			
 			// aapt resource value: 0x7f090009
 			public const int up = 2131296265;
 			

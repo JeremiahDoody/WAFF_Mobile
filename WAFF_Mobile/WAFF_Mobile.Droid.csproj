@@ -149,7 +149,6 @@
     </Compile>
     <Compile Include="Properties\Activity_Leaderboard.cs" />
     <Compile Include="Properties\Activity_ThankYou.cs" />
-    <Compile Include="Properties\LoginActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ActivityDescription.json" />
@@ -167,76 +166,75 @@
     <AndroidResource Include="Resources\menu\Options.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\res\drawable-hdpi\ic_action_menu.png" />
-    <AndroidResource Include="Resources\res\drawable-mdpi\ic_action_menu.png" />
-    <AndroidResource Include="Resources\res\drawable-xhdpi\ic_action_menu.png" />
-    <AndroidResource Include="Resources\res\drawable-xxhdpi\ic_action_menu.png" />
-    <AndroidResource Include="Resources\res\drawable-xxxhdpi\ic_action_menu.png" />
-    <AndroidResource Include="Resources\res\drawable-hdpi\ab_bottom_solid_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-hdpi\ab_solid_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-hdpi\ab_stacked_solid_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-hdpi\ic_action_location.png" />
-    <AndroidResource Include="Resources\res\drawable-hdpi\ic_action_refresh.png" />
-    <AndroidResource Include="Resources\res\drawable-hdpi\ic_action_settings.png" />
-    <AndroidResource Include="Resources\res\drawable-hdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\res\drawable-hdpi\list_focused_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-hdpi\menu_dropdown_panel_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-hdpi\progress_bg_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-hdpi\progress_primary_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-hdpi\progress_secondary_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-hdpi\spinner_ab_default_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-hdpi\spinner_ab_disabled_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-hdpi\spinner_ab_focused_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-hdpi\spinner_ab_pressed_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-hdpi\tab_selected_focused_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-hdpi\tab_selected_pressed_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-hdpi\tab_selected_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-hdpi\tab_unselected_focused_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-hdpi\tab_unselected_pressed_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-hdpi\tile.9.png" />
-    <AndroidResource Include="Resources\res\drawable-mdpi\ab_bottom_solid_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-mdpi\ab_solid_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-mdpi\ab_stacked_solid_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-mdpi\ic_action_location.png" />
-    <AndroidResource Include="Resources\res\drawable-mdpi\ic_action_refresh.png" />
-    <AndroidResource Include="Resources\res\drawable-mdpi\ic_action_settings.png" />
-    <AndroidResource Include="Resources\res\drawable-mdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\res\drawable-mdpi\list_focused_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-mdpi\menu_dropdown_panel_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-mdpi\progress_bg_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-mdpi\progress_primary_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-mdpi\progress_secondary_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-mdpi\spinner_ab_default_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-mdpi\spinner_ab_disabled_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-mdpi\spinner_ab_focused_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-mdpi\spinner_ab_pressed_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-mdpi\tab_selected_focused_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-mdpi\tab_selected_pressed_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-mdpi\tab_selected_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-mdpi\tab_unselected_focused_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-mdpi\tab_unselected_pressed_styled.9.png" />
-    <AndroidResource Include="Resources\res\drawable-mdpi\tile.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_menu.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_menu.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_menu.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_menu.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_action_menu.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_bottom_solid_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_solid_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_stacked_solid_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_location.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_refresh.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_settings.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\list_focused_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\menu_dropdown_panel_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\progress_bg_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\progress_primary_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\progress_secondary_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spinner_ab_default_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spinner_ab_disabled_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spinner_ab_focused_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spinner_ab_pressed_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_selected_focused_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_selected_pressed_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_selected_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_unselected_focused_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_unselected_pressed_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ab_bottom_solid_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ab_solid_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ab_stacked_solid_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_location.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_refresh.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_settings.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\list_focused_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\menu_dropdown_panel_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\progress_bg_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\progress_primary_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\progress_secondary_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\spinner_ab_default_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\spinner_ab_disabled_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\spinner_ab_focused_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\spinner_ab_pressed_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_selected_focused_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_selected_pressed_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_selected_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_unselected_focused_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_unselected_pressed_styled.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tile.9.png" />
     <AndroidResource Include="Resources\layout\listView.axml" />
-    <AndroidResource Include="Resources\layout\WAFFLogin.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
     <AndroidResource Include="Resources\values\Strings.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\res\drawable-hdpi\Icon.png" />
-    <AndroidResource Include="Resources\res\drawable-mdpi\Icon.png" />
-    <AndroidResource Include="Resources\res\drawable-xhdpi\Icon.png" />
-    <AndroidResource Include="Resources\res\drawable-xxhdpi\Icon.png" />
-    <AndroidResource Include="Resources\res\drawable-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\layout\WaffUITheme.xml" />
     <AndroidResource Include="Resources\layout\Leaderboard.axml" />
     <AndroidResource Include="Resources\layout\ThankYou.axml" />
     <AndroidResource Include="Resources\layout\HomeRowLayout.axml" />
-    <AndroidResource Include="Resources\res\drawable\unavailable.png" />
-    <AndroidResource Include="Resources\res\drawable\star_off.png" />
-    <AndroidResource Include="Resources\res\drawable\star_on.png" />
-    <AndroidResource Include="Resources\res\drawable\blank.png" />
+    <AndroidResource Include="Resources\drawable\unavailable.png" />
+    <AndroidResource Include="Resources\drawable\star_off.png" />
+    <AndroidResource Include="Resources\drawable\star_on.png" />
+    <AndroidResource Include="Resources\drawable\blank.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ItemGroup>
@@ -246,9 +244,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AndroidDesignerGenerator.tt.settings.xml" />
-    <AndroidResource Include="Resources\values\colors.xml" />
-    <AndroidResource Include="Resources\values\styles.xml" />
-    <AndroidResource Include="Resources\values\dimens.xml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
