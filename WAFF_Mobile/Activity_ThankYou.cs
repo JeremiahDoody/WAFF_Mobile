@@ -11,9 +11,9 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-using Xamarin;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+//using Xamarin;
+//using Xamarin.Forms;
+//using Xamarin.Forms.Xaml;
 
 namespace WAFF_Mobile
 {

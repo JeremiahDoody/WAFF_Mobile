@@ -12,12 +12,6 @@ using Android.Widget;
 using Android.OS;
 using Android.Graphics.Drawables;
 using Android.Graphics;
-using Android.Support.V7.AppCompat;
-
-using Xamarin;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
 
 //import JSON packages
 using Org.Json;
@@ -29,7 +23,7 @@ namespace WAFF_Mobile
 {
 	[Activity (Label = "WAFF_Mobile", MainLauncher = true, Icon = "@drawable/icon", Theme="@style/Theme.AppCompatActivity", ParentActivity = typeof(MainActivity))]
     [Register ("com.WAFF_Mobile.MainActivity")] //sets the source activity for the action bar
-    [Register("android/app/ActionBar",DoNotGenerateAcw=true)] 
+    //[Register ("android/app/ActionBar", DoNotGenerateAcw=true)] //Registers the Toolbar/ActionBar
     [MetaData ("android.support.PARENT_ACTIVITY", Value="WAFF_Mobile.MainActivity")] //Sets the action bars Parent Activity for older versions < v4.1
 	public class MainActivity : Activity
 	{
@@ -47,27 +41,22 @@ namespace WAFF_Mobile
 
 		//List<Film> filmList = new List<Film>();
 		//init buttons
-		Xamarin.Forms.Button leaderboardButton, favoritesButton;
+		Button leaderboardButton, favoritesButton;
 
 		//init other global variables
 		private int favoriteColorState = 0;
 		//ConsoleColor favoriteButtonDefaultColor;
 
-        /*public override ActionBar ActionBar
-        {
-            get{return base.ActionBar;}
-
-        }*/
-
         protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate (bundle);
-			// Set our view from the "main" layout resource
-			SetContentView (Resource.Layout.Main);
 
             //sets the Toolbar/ActionBar with backward compatibility
-            Android.Widget.Toolbar waffToolbar = (Toolbar)FindViewById(Resource.Id.WAFF_toolbar);
-            SetActionBar(waffToolbar);
+            Toolbar waffToolbar = (Toolbar)FindViewById(Resource.Id.WAFF_toolbar);
+           
+
+			// Set our view from the "main" layout resource
+			SetContentView (Resource.Layout.Main);           
 
 			string title = "World Arts Film Festival " + DateTime.Now.Year.ToString();
 			this.Title = title;
@@ -216,13 +205,13 @@ namespace WAFF_Mobile
               case Resource.Id.action_settings:
                     //show the app settings UI
                     return true;
-              case Resource.Id.action_uninstall:
+              case Resource.Id.uninstall:
                     //run the installation package
                     return true;
 				default:
 					return base.OnOptionsItemSelected(item);
 			}
-			return base.OnOptionsItemSelected(item);
+			//return base.OnOptionsItemSelected(item);
 		}//end OnOptionsItemSelected()
 
 
@@ -311,7 +300,7 @@ namespace WAFF_Mobile
 		{
 
 			Console.WriteLine ("OnListItemClick >> In OnListItemClick");
-			var listView = sender as Xamarin.Forms.ListView;
+			var listView = sender as ListView;
 			var t = tempList[e.Position];
 			Android.Widget.Toast.MakeText(this, t.Name + " - Playing in 10 minutes.", Android.Widget.ToastLength.Short).Show();
 

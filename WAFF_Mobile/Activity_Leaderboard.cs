@@ -11,9 +11,9 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-using Xamarin;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+//using Xamarin;
+//using Xamarin.Forms;
+//using Xamarin.Forms.Xaml;
 
 namespace WAFF_Mobile
 {
@@ -28,7 +28,7 @@ namespace WAFF_Mobile
 
 			//set back button
 			//set buttons
-			Xamarin.Forms.Button backButton = FindViewById<Button> (Resource.Id.leaderboard_backButton);
+			Android.Widget.Button backButton = FindViewById<Android.Widget.Button> (Resource.Id.leaderboard_backButton);
 
 			//set eventListener
 			backButton.Click += delegate {

@@ -45,116 +45,18 @@
     <Reference Include="Mono.Android" />
     <Reference Include="System.Windows" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="FormsViewGroup, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\WAFF\packages\Xamarin.Forms.2.0.1.6505\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Linq.Expressions, Version=1.2.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
-      <HintPath>..\packages\Mono.Linq.Expressions.1.2.0.0\lib\Mono.Linq.Expressions.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.CustomTabs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=71f3e3261ac778b5">
-      <HintPath>..\packages\Crosslight.Xamarin.Android.Support.CustomTabs.23.1.1\lib\MonoAndroid10\Xamarin.Android.Support.CustomTabs.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=71f3e3261ac778b5">
-      <HintPath>..\packages\Crosslight.Xamarin.Android.Support.Design.23.1.1\lib\MonoAndroid10\Xamarin.Android.Support.Design.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.Percent, Version=1.0.0.0, Culture=neutral, PublicKeyToken=71f3e3261ac778b5">
-      <HintPath>..\packages\Crosslight.Xamarin.Android.Support.Percent.23.1.1\lib\MonoAndroid10\Xamarin.Android.Support.Percent.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v13, Version=1.0.0.0, Culture=neutral, PublicKeyToken=71f3e3261ac778b5">
-      <HintPath>..\packages\Crosslight.Xamarin.Android.Support.v13.23.1.1\lib\MonoAndroid10\Xamarin.Android.Support.v13.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v14.Preference, Version=1.0.0.0, Culture=neutral, PublicKeyToken=71f3e3261ac778b5">
-      <HintPath>..\packages\Crosslight.Xamarin.Android.Support.v14.Preference.23.1.1\lib\MonoAndroid10\Xamarin.Android.Support.v14.Preference.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v17.Leanback, Version=1.0.0.0, Culture=neutral, PublicKeyToken=71f3e3261ac778b5">
-      <HintPath>..\packages\Crosslight.Xamarin.Android.Support.v17.Leanback.23.1.1\lib\MonoAndroid10\Xamarin.Android.Support.v17.Leanback.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=71f3e3261ac778b5">
-      <HintPath>..\packages\Crosslight.Xamarin.Android.Support.v4.23.1.1\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=71f3e3261ac778b5">
-      <HintPath>..\packages\Crosslight.Xamarin.Android.Support.v7.AppCompat.23.1.1\lib\MonoAndroid10\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.CardView, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\WAFF\packages\Xamarin.Android.Support.v7.CardView.23.0.1.3\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.MediaRouter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\WAFF\packages\Xamarin.Android.Support.v7.MediaRouter.23.0.1.3\lib\MonoAndroid403\Xamarin.Android.Support.v7.MediaRouter.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.Palette, Version=1.0.0.0, Culture=neutral, PublicKeyToken=71f3e3261ac778b5">
-      <HintPath>..\packages\Crosslight.Xamarin.Android.Support.v7.Palette.23.1.1\lib\MonoAndroid10\Xamarin.Android.Support.v7.Palette.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.Preference, Version=1.0.0.0, Culture=neutral, PublicKeyToken=71f3e3261ac778b5">
-      <HintPath>..\packages\Crosslight.Xamarin.Android.Support.v7.Preference.23.1.1\lib\MonoAndroid10\Xamarin.Android.Support.v7.Preference.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.RecyclerView, Version=1.0.0.0, Culture=neutral, PublicKeyToken=71f3e3261ac778b5">
-      <HintPath>..\packages\Crosslight.Xamarin.Android.Support.v7.RecyclerView.23.1.1\lib\MonoAndroid10\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\WAFF\packages\Xamarin.Forms.2.0.1.6505\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\WAFF\packages\Xamarin.Forms.2.0.1.6505\lib\MonoAndroid10\Xamarin.Forms.Platform.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Platform.Android, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\WAFF\packages\Xamarin.Forms.2.0.1.6505\lib\MonoAndroid10\Xamarin.Forms.Platform.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\WAFF\packages\Xamarin.Forms.2.0.1.6505\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
-    </Reference>
-    <Reference Include="Funq.Portable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\Funq.Portable.1.0.1\lib\Funq.Portable.dll</HintPath>
-    </Reference>
-    <Reference Include="Storm.Mvvm.Android, Version=1.0.2.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\Storm.Mvvm.Android.1.2.20\lib\MonoAndroid22\Storm.Mvvm.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="Portable.Xaml, Version=0.11.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\Portable.Xaml.0.11.0\lib\portable-net40+sl50+win+wp80+MonoAndroid10+xamarinios10+MonoTouch10\Portable.Xaml.dll</HintPath>
-    </Reference>
-    <Reference Include="Storm.Mvvm, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\Storm.Mvvm.1.2.10\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\Storm.Mvvm.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AndroidDesignerGenerator.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AndroidDesignerGenerator.tt</DependentUpon>
-    </Compile>
     <Compile Include="Framework\BindingSetup.cs" />
-    <Compile Include="HomeRowLayout.designer.cs">
-      <DependentUpon>AndroidDesignerGenerator.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Leaderboard.designer.cs">
-      <DependentUpon>AndroidDesignerGenerator.tt</DependentUpon>
-    </Compile>
-    <Compile Include="listView.designer.cs">
-      <DependentUpon>AndroidDesignerGenerator.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Main.designer.cs">
-      <DependentUpon>AndroidDesignerGenerator.tt</DependentUpon>
-    </Compile>
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="HomeScreenAdapter.cs" />
     <Compile Include="MainTableItem01.cs" />
-    <Compile Include="RowLayout.designer.cs">
-      <DependentUpon>AndroidDesignerGenerator.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ThankYou.designer.cs">
-      <DependentUpon>AndroidDesignerGenerator.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Activity_Leaderboard.cs" />
-    <Compile Include="Properties\Activity_ThankYou.cs" />
+    <Compile Include="Activity_Leaderboard.cs" />
+    <Compile Include="Activity_ThankYou.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ActivityDescription.json" />
-    <None Include="AndroidDesignerGenerator.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AndroidDesignerGenerator.cs</LastGenOutput>
-    </None>
-    <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
@@ -214,6 +116,7 @@
     <AndroidResource Include="Resources\drawable-mdpi\tab_unselected_pressed_styled.9.png" />
     <AndroidResource Include="Resources\drawable-mdpi\tile.9.png" />
     <AndroidResource Include="Resources\layout\listView.axml" />
+    <AndroidResource Include="Resources\values\Attr.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -239,9 +142,11 @@
     <Folder Include="Assets\Icons\" />
     <Folder Include="Model\" />
     <Folder Include="Services\" />
+    <Folder Include="Resources\layout-v21\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AndroidDesignerGenerator.tt.settings.xml" />
+    <AndroidResource Include="Resources\values\Dimens.xml" />
+    <AndroidResource Include="Resources\values\Colors.xml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -252,7 +157,5 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\..\WAFF\packages\Xamarin.Forms.2.0.1.6505\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\WAFF\packages\Xamarin.Forms.2.0.1.6505\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets'))" />
-    <Error Condition="!Exists('..\packages\Storm.Mvvm.Android.1.2.20\build\Storm.Mvvm.Android.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Storm.Mvvm.Android.1.2.20\build\Storm.Mvvm.Android.targets'))" />
   </Target>
-  <Import Project="..\packages\Storm.Mvvm.Android.1.2.20\build\Storm.Mvvm.Android.targets" Condition="Exists('..\packages\Storm.Mvvm.Android.1.2.20\build\Storm.Mvvm.Android.targets')" />
 </Project>

@@ -4,14 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbars="vertical">
+    <style
+        name="WAFF_Theme" />
     <android.support.v7.widget.Toolbar
         android:id="@+id/WAFF_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        android:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        android:layout_height="match_parent"
+        android:elevation="4dp" />
 <!--This code is designed to allow a customized Toolbar rather than the built-in ActionBar...
     beware older than Android 5.0 may not be compatible with the new Toolbar type
     <android.support.v7.widget.Toolbar

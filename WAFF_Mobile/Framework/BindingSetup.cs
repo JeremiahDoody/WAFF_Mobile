@@ -10,9 +10,6 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-using Xamarin;
-using Xamarin.Forms;
-
 namespace WAFF_Mobile.Framework
 {
     class BindingSetup
