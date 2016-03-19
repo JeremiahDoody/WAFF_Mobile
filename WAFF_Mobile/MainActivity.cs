@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using System.Drawing;
+using System.Data;
 
 using Android.App;
 using Android.Content;
@@ -13,15 +14,21 @@ using Android.OS;
 using Android.Graphics.Drawables;
 using Android.Graphics;
 
+//using Xamarin.Auth._MobileServices; //recommend using Azure MobileServices rather than Xamarin MobileServices
+//using Xamarin.Utilities._MobileServices.Android;
+
+using Microsoft.WindowsAzure.MobileServices;
+using Microsoft.WindowsAzure.MobileServices.Sync;
+using Microsoft.SqlServer.Server;
+
 //import JSON packages
 using Org.Json;
 //using Org.Json.JSONException;
 //using Org.Json.JSONTokener;
 
-
 namespace WAFF_Mobile
 {
-	[Activity (Label = "WAFF_Mobile", MainLauncher = true, Icon = "@drawable/icon", Theme="@style/Theme.AppCompatActivity", ParentActivity = typeof(MainActivity))]
+	[Activity (Label = "WAFF_Mobile", MainLauncher = true, Icon = "@drawable/icon", Theme="@android:style/Theme.Holo.Light", ParentActivity = typeof(MainActivity))]
     [Register ("com.WAFF_Mobile.MainActivity")] //sets the source activity for the action bar
     //[Register ("android/app/ActionBar", DoNotGenerateAcw=true)] //Registers the Toolbar/ActionBar
     [MetaData ("android.support.PARENT_ACTIVITY", Value="WAFF_Mobile.MainActivity")] //Sets the action bars Parent Activity for older versions < v4.1
@@ -33,7 +40,41 @@ namespace WAFF_Mobile
 //			public String name;
 //			public String time;
 //		}
-		public static MainActivity mainActivity; 
+        public static MainActivity mainActivity;
+
+		/// <summary>
+		/// Microsoft Azure connection string for mobile services...may not need since the Microsoft.Azure.Mobile.Services package has been included
+		/// </summary>
+		public static Microsoft.WindowsAzure.MobileServices.CurrentPlatform MobileService = new Microsoft.WindowsAzure.MobileServices.CurrentPlatform(GetConnectionString());
+
+        /*public static Microsoft.WindowsAzure.MobileServices.MobileServiceClient WAFF_MobileClient = new Microsoft.WindowsAzure.MobileServices.MobileServiceClient(http://waff.azureservices.net);*/
+
+		/// <summary>
+		/// Creates the sql connection.
+		/// </summary>
+		/// <param name="connectionString">Connection string.</param>
+        /*public static void CreateSqlConnection(string connectionString)
+        {
+			//System.Data.SqlClient.SqlConnectionStringBuilder connectionString = GetConnectionString();
+
+			using (System.Data.SqlClient.SqlConnection connection= new System.Data.SqlClient.SqlConnection(connectionString))
+            {
+                connectionString = GetConnectionString();
+                //connectionString.Open;
+                Console.WriteLine("ServerVersion: {0}", connection.ServerVersion);
+                Console.Write("State: {0}", connection.State);
+                //Console.Write("ConnectionString: {0}",connection.ConnectionString);
+            }
+        }*/
+
+		/// <summary>
+		/// Gets the remote server connection string.
+		/// </summary>
+		/// <returns>The connection string.</returns>
+        public static string GetConnectionString()
+        {
+            return "DataSource=tcp:waff-server.database.windows.net,1433;Database=WAFF;User ID=WAFFadmin@waff-server;Password=waff#2016;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        }
 	
 		//private ArrayList tempList = new ArrayList();
 		List<MainTableItem01> tempList = new List<MainTableItem01>();
@@ -50,6 +91,9 @@ namespace WAFF_Mobile
         protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate (bundle);
+
+            //setup http request to web server
+
 
             //sets the Toolbar/ActionBar with backward compatibility
             Toolbar waffToolbar = (Toolbar)FindViewById(Resource.Id.WAFF_toolbar);

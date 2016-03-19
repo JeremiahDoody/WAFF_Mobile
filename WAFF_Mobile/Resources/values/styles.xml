@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+<style name="themeWAFF" parent="themeWAFF.Base"/>
+  <style name="themeWAFF.Base" parent="Theme.AppCompat.Light">
+    <item name="colorPrimary">@color/Primary</item>
+    <item name="colorAccent">@color/Accent</item>
+    <item name="android:windowBackground">@color/Window_Background</item>
+  </style>
+</resources>
