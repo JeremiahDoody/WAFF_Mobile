@@ -7,7 +7,7 @@
 	<string name="favOff">Favorites ☆</string>
 	<string name="favOn">Favorites ★</string>
   <string name="settings">Settings</string>
-  <style name="Theme" parent="android:Theme.Material.Light">
+  <style name="WAFF" parent="android:Theme.Material.Light">
 	<!--customize the WAFF color palette-->
 	<item name="android:textColor">#00FF00</item>
 	</style>

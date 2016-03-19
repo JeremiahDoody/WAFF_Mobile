@@ -45,7 +45,7 @@ namespace WAFF_Mobile
 		/// <summary>
 		/// Microsoft Azure connection string for mobile services...may not need since the Microsoft.Azure.Mobile.Services package has been included
 		/// </summary>
-		public static Microsoft.WindowsAzure.MobileServices.CurrentPlatform MobileService = new Microsoft.WindowsAzure.MobileServices.CurrentPlatform(GetConnectionString());
+        /*public static Microsoft.WindowsAzure.MobileServices.CurrentPlatform MobileService = new Microsoft.WindowsAzure.MobileServices.CurrentPlatform(GetConnectionString());*/
 
         /*public static Microsoft.WindowsAzure.MobileServices.MobileServiceClient WAFF_MobileClient = new Microsoft.WindowsAzure.MobileServices.MobileServiceClient(http://waff.azureservices.net);*/
 
